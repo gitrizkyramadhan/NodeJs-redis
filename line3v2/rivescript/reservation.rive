@@ -1,0 +1,45 @@
++ [*] (@halo) [*]
+- gr01
+
++ [*]promo[*]
+- info promo
+
++ [*]cabang[*]
+- info cabang
+
++ [*]produk[*]
+- info produk
+
++ [*]atm[*]
+- info atm
+
++ [*](agen|agent)[*]
+- info agen
+
++ [*](@makanan)[*]
+- info makanan
+
++ [*]gadget[*]
+- info gadget
+
++ [*](simpanan|saving)[*]
+- simpanan
+
++ [*](pinjaman|loan)[*]
+- pinjaman
+
++ [*](kredit|kartu kredit)[*]
+- kartu kredit
+
++ [*]bot[*]
+- saya Maya , Virtual assistant BNI
+
++ [*]register[*]
+- rg00
+
++ [*]saldo[*]
+- ck00
+
++ *
+- Mohon maaf, Maya belum dapat menjawab pertanyaan Anda
+

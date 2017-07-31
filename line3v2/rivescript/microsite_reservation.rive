@@ -1,0 +1,52 @@
++ [*](@registrasi)[*]
+- pu00 Oke, sebelum daftar UnikQu Maya minta data-data kamu dulu ya!
+^ Yang pertama, no hp kamu berapa?
+^ Contoh: 08xxxxxxxxxx {topic=no_hp}
+
++ userexittorandom
+- {topic=random} <set mycontext=random>
+
+> topic nama
+    + *
+    - nm00 Oke deh <first_name>! <br>
+    ^ eh no hp lo brapa nih {topic=no_hp}
+< topic
+
+> topic no_hp
+  + [*] # [*]
+  - pu01 <set no_hp=<star>> Nanti Maya akan kirim SMS kode verifikasi ke nomor HP yang kamu daftarin ini. {topic=jawab_otp}
+< topic
+
+> topic jawab_otp global
+  + *
+  - au00 {topic=email}
+< topic
+
+> topic email
+  + *
+  - em00 nama depan kamu siapa ? {topic=nama_depan}
+< topic
+
+> topic nama_depan
+  + *
+  - nd00 terus nama belakang nya ? {topic=nama_belakang}
+< topic
+
+> topic nama_belakang
+  + *
+  - nb00 Nah, kamu juga perlu buat pertanyaan keamanan untuk akun UnikQu kamu yang baru.
+  ^ Contoh: Siapa nama hewan peliharaan kamu pertama kali? {topic=secret_question}
+< topic
+
+> topic secret_question
+  + *
+  - qs00 Sekarang, tinggal bikin jawaban dari pertanyaan keamanan yang tadi udah kamu buat deh. {topic=jawab_secret_question}
+< topic
+
+> topic jawab_secret_question
+  + *
+  - jqs0 Oke, terima kasih ya registrasi akun UnikQu kamu udah berhasil dengan detail berikut ini,
+  ^ Nomor UnikQu: xxxxx
+  ^ PIN: xxxxx
+  ^ Ada lagi yang bisa Maya bantu? {topic=random}
+< topic

@@ -1,0 +1,640 @@
++ usertoprofiling
+- Halo <first_name>, apa kabar? Gue Bang Joni, temen virtual yang hidup di Line Messenger.<br>
+^ Eh iya, namanya bener <first_name> ya? Atau ada panggilan lain nih? {topic=nama}
+
++ [*] (@test) [*]
+- {@halo}
+
++ [*] (menu) [*]
+- gr01 Oke deh, apa yang bisa gue bantu nih? :) {topic=random} <set mycontext=random>
+
++ [*] (@halo) [*]
+- gr01 Halo, <first_name>! <br>
+^ Apa yang bisa gue bantu nih? ;) {topic=random} <set mycontext=random>
+- gr01 Ya? Mau gue bantu apa nih, <first_name>? ;) {topic=random} <set mycontext=random>
+- gr01 Halo juga! <br>
+^ Ada yang bisa gue bantu, <first_name>? ;) {topic=random} <set mycontext=random>
+
++ askafterservice
+- gr01 Oke deh, ada lagi yang bisa gue bantu? ;) {topic=random} <set mycontext=random>
+
++ gak jadi topup {weight=20}
+- {@ askafterservice}
+
++ [*] (@assalamualaikum) [*] {weight=10}
+- gr01 Wa'alaikumsalam, <first_name>! :) <br>
+^ Apa yang bisa gue bantu nih? {topic=random} <set mycontext=random>
+
++ [*] (@salam kenal) [*] {weight=10}
+- gr01 Yooo... <first_name>, salam kenal juga ya! <br>
+^ Apa yang bisa gue bantu nih? :) {topic=random} <set mycontext=random>
+
++ @test
+- gr01 Yuhuu.. Tes.. Tes.. <br>
+^ Apa yang bisa gue bantu nih? :) {topic=random} <set mycontext=random>
+
++ [*] (@thanks) [*] {weight=10}
+- Sip! Sama-sama yaa :) {topic=random} <set mycontext=random>
+- You're welcome! {topic=random} <set mycontext=random>
+- Sama-sama yaa :) {topic=random} <set mycontext=random>
+
++ [*] (@ok) [*] {weight=10}
+- Ok!
+- Okeee..
+- Sip!
+
++ [*] (@makian) [*] {weight=5}
+- Ish jangan gitu ah ngomongnya.. :/
+- Busyettt.. Jangan ngomong kasar ah, gak keren :/
+
++ [*] iseng [*] {weight=10}
+- Hmm.. Daripada iseng gak ada kerjaan, mending kita main tebak-tebakan aja mau nggak? :D {topic=tebak_tebakan}
+
++ [*] (@bosen) [*] {weight=10}
+- Hmm.. Daripada bosen gak ada kerjaan, mending kita main tebak-tebakan aja mau nggak? :D {topic=tebak_tebakan}
+- Bosen ya? Mending lo ke bioskop deh ajak temen-temen lo. <br>
+^ Banyak film seru loh! Coba cek deh di sini >> http://www.21cineplex.com/nowplaying <br>
+^ Hehehe.. Ada lagi yang bisa gue bantu? {topic=bioskop}
+- Bosen ya? Mending lo ke bioskop deh ajak temen-temen lo. <br>
+^ Banyak film seru loh! Coba cek deh di sini >> https://www.cgv.id/en/movies/now_playing <br>
+^ Hehehe.. Ada lagi yang bisa gue bantu? {topic=bioskop}
+- Bosen ya? Mending lo ke bioskop deh ajak temen-temen lo. <br>
+^ Banyak film seru loh! Coba cek deh di sini >> http://www.cinemaxxtheater.com/Movies.aspx <br>
+^ Hehehe.. Ada lagi yang bisa gue bantu? {topic=bioskop}
+
++ *
+* <get mycontext> != random => gr01 Duh.. Maaf ya, gue belom bisa jawab pertanyaan lo nih, masih belajar soalnya :) <br>
+^ Coba cek di atas deh.. Apa yang bisa gue bantu kira-kira? {topic=<get mycontext>} {topic=random}
+
++ [*] (@gakada) [*]
+- Hmm.. Daripada gak ada kerjaan, mending kita main tebak-tebakan aja mau nggak? :D {topic=tebak_tebakan} 
+- Gak ada kerjaan ya? Mending lo ke bioskop deh ajak temen-temen lo. <br>
+^ Banyak film seru loh! Coba cek deh di sini >> http://www.21cineplex.com/nowplaying {topic=bioskop}
+- Gak ada kerjaan ya? Mending lo ke bioskop deh ajak temen-temen lo. <br>
+^ Banyak film seru loh! Coba cek deh di sini >> https://www.cgv.id/en/movies/now_playing {topic=bioskop}
+- Gak ada kerjaan ya? Mending lo ke bioskop deh ajak temen-temen lo. <br>
+^ Banyak film seru loh! Coba cek deh di sini >> http://www.cinemaxxtheater.com/Movies.aspx {topic=bioskop}
+
++ [*] (@cari) [*] (@tiket) [*] {weight=10}
+- Tiket apa nih?
+
++ [*] (@pulsa) [*] {weight=11}
+- pu00
+//Mau isi pulsa? Boleh minta nomer HP-nya? {topic=pulsa} <set c=pulsa> <set pulsa_data=0>
+
++ [*] [@hariini|@besok] (@ujan) [*] {weight=10}
+- we01 Nggak tau juga deh, coba gue cek ya!\n\n
+^ Pake fitur share location lo ya untuk menentukan lokasinya (tombol + samping tombol emoticon)\n\n
+^ Lo bisa share lokasi lo sekarang ini atau bisa juga share lokasi lain.<br>
+^ Nanti gue kasih info perkiraan cuaca berdasarkan lokasi yang lo pilih ;)
+
++ [*] (@cari) [*] (@pesawat) [*] {weight=20}
+- fl00 Nyari tiket pesawat murah? Emang paling bener deh nanya sama gue :D <br>
+^ Nah ini nih destinasi yang paling banyak dicari sama orang-orang.
+//^ Nah ini nih destinasi yang paling banyak dicari sama orang-orang. {topic flight_reservation}
+//- Duh sorry ya <first_name>, gue belom bisa pesenin lo tiket pesawat nih. <br>
+//^ Sistem gue masih di-upgrade ke versi baru supaya nanti mesenya lebih gampang. <br>
+//^ Tungguin yaa ;)
+
++ [*] (@pesawat) [*] {weight=10}
+- fl00 Nyari tiket pesawat murah? Emang paling bener deh nanya sama gue :D <br>
+^ Nah ini nih destinasi yang paling banyak dicari sama orang-orang.
+//^ Nah ini nih destinasi yang paling banyak dicari sama orang-orang. {topic flight_reservation}
+//- Duh sorry ya <first_name>, gue belom bisa pesenin lo tiket pesawat nih. <br>
+//^ Sistem gue masih di-upgrade ke versi baru supaya nanti mesenya lebih gampang. <br>
+//^ Tungguin yaa ;)
+
++ [*] (@xtrans) [*] {weight=11}
+- xt01 Oke! Itu daftar pool keberangkatan Xtrans. <br>
+^ Lo mau berangkat dari mana, <first_name>?\n
+^ Ketik aja nama poolnya (Contoh: Bale Xtrans) {topic=xtrans} <set mycontext=xtrans>
+
++ userexittorandom
+- {topic=random} <set mycontext=random>
+
++ [*] (@thanks) [*] {weight=10}
+- Sip! Sama-sama yaa :) {topic=random} <set mycontext=random>
+- You're welcome! {topic=random} <set mycontext=random>
+- Sama-sama yaa :) {topic=random} <set mycontext=random>
+
++ [*] (@ok) [*] {weight=10}
+- Ok!
+- Okeee
+- Sip!
+
++ [*] (@assalamualaikum) [*]
+- gr01 Wa'alaikumsalam! <br>
+^ Ya <first_name>, apa yang bisa gue bantu nih? {topic=random} <set mycontext=random>
+
++ [*] (@salam kenal) [*]
+- gr01 Yooo... <first_name>, salam kenal juga ya! <br>
+^ Apa yang bisa gue bantu nih? {topic=random} <set mycontext=random>
+
++ [*] (ga jadi|gak jadi|nggak jadi|cancel|batal|batalin|enggak jadi|nanti aja|tidak jadi) [*]
+- co00 Oke, mau di-cancel nih ya? {topic=cancelconfirm}
+//- ca01 Sip! Pesenannya udah gue cancel yaa {topic=cancelconfirm}
+
++ [*] (@kamu) [*] (@siapa|@apa) [*]
+- gr01 Gue tuh temen virtual yang hidup di LINE messenger, hehehe :D <br>
+^ Lahirnya dari teknologi artificial intelligence, atau bisa dibilang kecerdasan buatan. <br>
+^ Anyway, apa yang bisa gue bantu nih? {topic=random} <set mycontext=random>
+
+> topic cancelconfirm
+
+    + [*] (@mau) [*]
+    * <get mycontext> == uber => ch02 Oke, gue batalin uber-nya nih.{topic=random} <set mycontext=random>
+    - ca01 Yaudah deh, udah gue batalin nih {topic=random} <set mycontext=random>
+    - ca01 Sip! Pesenannya udah gue cancel yaa {topic=random} <set mycontext=random>
+
+    + [*] (@nggak) [*]
+    - Okee, lanjut ya pesennya {topic=<get mycontext>}
+
+    + *
+    - Gue gak ngerti dah, seriusan. Yakin banget nih gak jadi?
+
+< topic
+
+> topic global
+
+  + [*] (ga jadi|gak jadi|nggak jadi|cancel|batal|batalin|enggak jadi|nanti aja|tidak jadi) [*] {weight=10}
+  - co00 Yakin banget nih gak jadi? {topic=cancelconfirm}
+
+  + [*] (ok|okk|oke|okee|okeee|sip|sipp|sippp|siip|siiipp|siiippp) [*]
+  - sippp
+  - okee
+
+  + [*] (thanks|tks|makasih|makasij|makash|makasi|terima kasih|trm ksh|trimakasih|trima kasih|trima ksih|tq|thx|trims|tengs|thank|terimakasih) [*]
+  - Sama-sama <first_name> {topic=random} <set mycontext=random>
+  - You're welcome <first_name> {topic=random} <set mycontext=random>
+  - Anytime <first_name>! {topic=random} <set mycontext=random>
+  - Yoi sama-sama :) {topic=random} <set mycontext=random>
+
+  + (*)
+  - {topic=random}{@ <star>}
+
+
+  + [*] (menu|bisa apa|bisa ap|bisa ngapain|bisa ngpain|bsa apa|bsa ap|bsa ngapain|bsa ngpain|bs apa|bs ap|bs ngapain|bs ngpain|bisa bantu apa|bsa bantu apa|bs bantu apa|bisa bntu apa|bsa bntu apa|bs bntu apa|bisa bantu ap|bsa bantu ap|bs bantu ap|bs bntu ap|bsa bntu ap|menu|help|robot|kamu robot) [aja|aj|ya|sih] [*]
+  - gr01 Loh, waktu itu kan udah kenalan. <br>
+  ^ Gue tuh temen virtual yang hidup di Line messenger lo :D <br>
+  ^ Btw, ada apa nih? Apa yang bisa gue bantu?  {topic=random} <set mycontext=random>
+
+  + userexittorandom
+  - {topic=random} <set mycontext=random>
+
+< topic
+
+///////////////////////////////////START REMINDER
++ [*] (@ingetin) [*] {weight=10}
+* <get sholat_kota> == undefined => Ok, tapi gue perlu nyamain waktunya dulu ya biar nggak salah. <br>
+^ Nah, lo sekarang di kota mana <first_name>? {topic=setcity1} <set mycontext=setcity1>
+- Oke deh! buat bikin notes reminder, lo bisa ketik kayak gini ya: <br>
+^ Ingetin ada resepsi nikah lusa\n
+^ Ingetin bangun pagi tiap jam 5\n
+^ Ingetin bayar listrik tiap tanggal 5 juli\n
+^ Ingetin meeting sama sales tiap senin jam 9.30 <set sholat_kota=<star>> {topic=random} <set mycontext=random>
+
+//+ [*] (ingetin|reminder|bangunin)
+//* <get sholat_kota> == undefined => Ok, tapi gue perlu nyamain waktunya dulu ya biar nggak salah. <br>
+^ Nah, lo sekarang di kota mana <first_name>? {topic=setcity1} <set mycontext=setcity1>
+//- Oke deh! buat bikin notes reminder, lo bisa ketik kayak gini ya: <br>
+//^ - Ingetin ada resepsi nikah lusa\n
+//^ - Ingetin bangun pagi tiap jam 5\n
+//^ - Ingetin bayar listrik tiap tgl 5 juli\n
+//^ - Ingetin meeting dengan sales tiap senin jam 9.30
+
++ [*] (ingetin|reminder|bangunin) *{weight=11}
+* <get sholat_kota> == undefined => Ok, tapi gue perlu nyamain waktunya dulu ya biar nggak salah. <br>
+^ Nah, lo sekarang di kota mana <first_name>? <set rem_pesan=<star2>> {topic=setcity2} <set mycontext=setcity2>
+- re01 OK <first_name>. <set rem_pesan=<star2>>
+
++ [*] (ingetin|reminder|remind) [*] (sholat|imsak|buka|berbuka) [*]
+* <get sholat_kota> == undefined => Ok, tapi gue perlu nyamain waktunya dulu ya biar nggak salah. <br>
+^ Nah, lo sekarang di kota mana <first_name>? {topic=remindsholat} <set mycontext=remindsholat>
+- rs01 Siap, Bang Joni akan ingetin kamu waktu <set pilih=<star2>><get pilih>
+
++ [*] (infoin|kasih tahu|beri tahu) [*] (goal) [*]
+- OK
+
++ [*] lihat reminder [*]
+- re02 Oke, ini list reminder lo yaa:
+
++ [*] hapus reminder [*]
+- Sorry, layanan penghapusan reminder masih belom ada nih.
+
++ [*] (set|ubah|ganti) [*] (kota|lokasi) [*] (@kotasholat1|@kotasholat2|@kotasholat3|@kotasholat4|@kotasholat5) [*]
+- sc01 Ok <first_name>, gue set reminder-nya dengan waktu kota <set sholat_kota=<star3>> <get sholat_kota>
+
++ [*] (set|ubah|ganti) [*] (kota|lokasi) [*]
+- Ok <first_name>, lo sekarang di kota mana? {topic=setcity3}
+
+
+
+/////////////////////////////////START INFO BANTUAN
++ (bantuan)
+- cmp01 Bang Joni adalah teman virtual di Line Messenger yang mempunyai semangat membantu memenuhi kebutuhan-kebutuhan kamu\n
+^ Beralamat di:\n
+^ Gedung Palma One - Suite 210\n
+^ Jl. H.R Rasuna Said Kav X-2 No.4\n
+^ Kuningan Timur, Jakarta Selatan\n
+^ 12950 Indonesia\n
+^ LineID @CSbangjoni\n
+^ www.bangjoni.com 2016\n
+^ cs@bangjoni.com
+
+
+
+//////////////////////////////////START TRANSLATOR
++ [*] (terjemahin|terjemain|translate|translator|kamus on) [*]
+* <get translate_lang> == undefined => Terjemahin ke bahasa apa <first_name> (inggris, perancis, mandarin, arab, jepang, korea, jerman, indonesia)? {topic=translator}
+- tr01 Oke, mode translatornya udah gue aktifin ya. <br>
+^ Kalo udah selesai, jangan lupa ketik KAMUS OFF buat matiin mode translatornya. <br>
+^ Sekarang lo bisa ketik deh kata-kata yang mau di-translate-in.
+
++ [*] (terjemahin|terjemain|translate) (ke|ke bahasa) (inggris|perancis|mandarin|arab|jepang|korea|jerman|indonesia) [*]
+- tr01 Oke, mode translatornya udah gue aktifin ya. <br>
+^ Kalo udah selesai, jangan lupa ketik KAMUS OFF buat matiin mode translatornya. <br> <set translate_lang=<star3>>
+^ Sekarang lo bisa ketik deh kata-kata yang mau di-translate-in.
+
++ kamus off
+- tr02 Sip! Mode translator-nya udah gue matiin. <br>
+^ Lumayan lah yaa bahasa asing gue, boleh juga :D
+
+
+///////////////////////////////////SALDO CHECK BJPAY
++ [*] (saldo|balance) [*]
+- bj00 Udah gue cek nih, saldo BJPay lo dengan nomor HP <bjpay_phone> sekarang ada Rp <bjpay_balance> <br>
+^ Kalo mau top up, lo tinggal ketik TOP UP aja yaa..
+
++ bj01
+- Hari gini belom daftar BJPay? Ckckckck, buruan daftar gih, gampang banget! Tinggal tap "Register" aja<br>
+^ Atau kalo lo udah pernah punya BJPay sebelomnya, abis nge-tap "Register", tinggal ketik nomer HP yang pernah lo daftarin sebelomnya :D
+
++ bj02
+- Kalo gue cek, kayaknya lo udah pernah punya akun BJPay deh <first_name><br>
+^ Saldonya ada Rp <bjpay_balance> dan nomor HP yang didaftarin tuh yang <bjpay_phone> <br>
+^ Kalo mau top up, lo tinggal ketik TOP UP aja yaa..
+
++ bj03
+- Yuhuuu.. Pendaftaran BJPay lo udah berhasil nih! <br>
+^ Sekarang tinggal pilih deh mau top up saldonya dari bank apa<br>
+^ Untuk via BCA top up-nya bakal masuk maksimal 2 jam, kalo via Bank Permata top up-nya bakal masuk maksimal 5 menit yaa..
+
++ bj04
+- Yeayy, Top up saldo BJPay lo senilai Rp <bjpay_topup> udah berhasil! <br>
+^ Saldo BJPay lo sekarang ada Rp <bjpay_balance> <br>
+^ Terus saldonya mau dibeliin apa nih, <first_name>? <br>
+^ Pulsa atau token listrik?
+
++ bj05
+- <first_name>, sori ya ini gue cek kayaknya pulsa yang lo beli buat nomer <phone_number> gak masuk nih, gue refund saldo BJPay-nya ya Rp <bjpay_refund> <br>
+^ Coba 15 menit lagi deh kalo mau beli pulsa, mudah-mudahan udah bisa nanti :) <br>
+^ Sorry yaa..
+
+
+
+///////////////////////////////////DEPOSIT BJPAY
++ [*] (deposit|topup|top up|isi bjpay) [*]
+- bj99 Oke, lo mau top up via bank apa <first_name>? <br>
+^ Tap aja langsung di logo bank-nya yaa.. {topic=deposit} <set mycontext=deposit>
+
+
+
+///////////////////////////////////DEPOSIT BJPAY
++ [*] (bjpay register) [*]
+- bj11 {topic=pulsa} <set mycontext=pulsa>
+
+
+
+///////////////////////////////////START PULSA HP
++ [*] (@pulsa) [*] {weight=10}
+- pu00
+
++ [*] (@pulsa) [*] {weight=10}
+- pu04 Mau isi pulsa? Boleh minta nomer HP-nya? {topic=pulsa} <set mycontext=pulsa> <set pulsa_data=0>
+
+
+///////////////////////////////////REMINDER PULSA HP
++ [*] (@pulsa) (#) [*] {weight=12}
+- pu01 <set no_hp=<star2>> Ok, lo pilih pulsa dengan nominal {topic=pulsa} <set mycontext=pulsa> <set pulsa_data=0>
+
+//////////////////////////////////START TOKEN LISTRIK
++ [*] (token|pulsa listrik|token pln|token listrik) [*] {weight=10}
+- Nomor meter prabayar-nya berapa <first_name>? {topic=token} <set mycontext=token>
+
+
+
+
+///////////////////////////////////START PULSA DATA HP
++ [*] (pulsa data|bang isiin pulsa data dong|paket data|paket internet|pulsa internet) [*]
+- Oke, tapi sementara ini gue baru punya pulsa data Telkomsel nih <br>
+^ Nomer yang mau diisi kuota nomer Telkomsel bukan? <br>
+^ Kalo iya, langsung ketik aja nomernya (contoh 0812xxxx) {topic=pulsa} <set mycontext=pulsa> <set pulsa_data=1>
+
+> topic deposit inherits global
+  + (bank permata|transfer bca)
+  - bj03 Okee, lo mau deposit berapa <first_name>? <br>
+  ^ Isi nominalnya nggak usah pake titik ya, misalnya 100000. <br>
+  ^ Oiya, pastiin nominal depositnya cukup buat beli pulsanya yaa.. <set deposit_bank=<star>>
+
+  + [*] # [*] {weight=10}
+  - bj04 Oke, tunggu ya lagi gue proses nih :) <set deposit_nominal=<star>>  {topic=random} <set mycontext=random>
+
+  + (mandiri)
+  - Hmm.. Buat sekarang top up via Bank Mandiri belom bisa gue proses nih <br>
+  ^ Coba pake Bank Permata atau Bank BCA dulu yaa
+
+  //+ (transfer bca)
+  //- Untuk sementara transfer ke BCA belom bisa bang joni proses, pakai VA Permata atau BCA dl ya
+
+< topic
+
+> topic pulsa inherits global
+  + [*] # [*] {weight=10}
+  - pu01 <set no_hp=<star>> Ok, lo pilih pulsa dengan nominal
+
+  + (lima ribu|sepuluh ribu|dua puluh ribu|dua puluh lima ribu|lima puluh ribu|seratus ribu)
+  - pu02 <set nominal_token=<star>>Ok, lo pilih pulsa dengan nominal <get nominal_token>\n
+  ^ Eh, ada yang baru nih! BJPay, metode pembayaran terbaru dari Bang Joni yang saat ini bisa lo pake untuk beli pulsa dan token listrik\n
+  ^ Tinggal isi saldonya, kapan aja dan di mana aja lo bisa beli pulsa di Bang Joni!\n\n
+  ^ Untuk daftar BJPay, tap gambar di atas
+
+  + bjpay register
+  - Oke! Ketik nomer HP yang mau lo daftarin buat akun BJPay <br>
+  ^ Formatnya gini ya, 08xxxxxx {topic=registerbjpay} <set mycontext=registerbjpay>
+  
+< topic
+
+> topic registerbjpay inherits global
+  + [*] # [*] {weight=10}
+  - bj02 <set hp_deposit=<star>> Sip, gue proses yaa
+
+  + (bank permata|bca)
+  - bj03 Okee, lo mau deposit berapa <first_name>? <br>
+  ^ Isi nominalnya nggak usah pake titik ya, misalnya 100000 <br>
+  ^ Oiya, pastiin nominal depositnya cukup buat beli pulsanya yaa <set deposit_bank=<star>> {topic=deposit} <set mycontext=deposit>
+
+  + (mandiri)
+  - Hmm.. Buat sekarang top up via Bank Mandiri belom bisa gue proses nih. <br>
+  ^ Coba pake Bank Permata atau Bank BCA dulu yaa..
+
+  //+ (transfer bca)
+  //- Hmm.. Buat sekarang top up via Bank Mandiri belom bisa gue proses nih. <br>
+    ^ Coba pake Bank Permata atau Bank Mandiri dulu yaa..
+< topic
+
+> topic token inherits global
+  + [*] # [*] {weight=10}
+  //- pl01 Ok, gue cek dulu nomor meter-nya ya... <set id_pln=<star>>
+  - pl01 Berikut tarif token-nya:\n20K Rp. 21.000\n50K Rp. 51.000\n100K Rp. 101.000\n200K Rp. 201.000<br>Untuk memilih tap menu diatas ya <set id_pln=<star>>
+
+  + (dua puluh|lima puluh|seratus|dua ratus|lima ratus|satu juta|lima juta|sepuluh juta|lima puluh juta)
+  - pl02 <set nominal_token=<star>> Ok, token yang lo pilih nominalnya <get nominal_token> <br>
+  ^ selanjutnya pilih metode bayar dengan tap menu di atas.
+
+  + bjpay register
+  - Nah gitu dong! Sekarang ketik nomor HP yang mau lo daftarin BJPay dengan format (08xxxxxxxxxx) {topic=registerbjpay} <set mycontext=registerbjpay>
+< topic
+
+> topic translator inherits global
+  + [*] (inggris|perancis|mandarin|arab|jepang|korea|jerman|indonesia) [*]
+  - tr01 Ok, mode translator udah aktif ya <br>
+  ^ Kalo udah selesai, jangan lupa ketik "KAMUS OFF" untuk matiin mode translatornya <br>
+  ^ Sekarang, ketik kata atau kalimat yang mau diterjemahin.. <set translate_lang=<star>>
+
+  + kamus off
+  - tr02 Sip! Mode translator udah gue matiin yaa.. {topic=random} <set mycontext=random>
+< topic
+
+
+> topic waktusholat inherits global
+  + [*] (@kotasholat1|@kotasholat2|@kotasholat3|@kotasholat4|@kotasholat5) [*]
+  - sh01 Siap, gue cariin dulu infonya ya... <set sholat_kota=<star>> {topic=random} <set mycontext=random>
+
+  //+ [*] (@kotashol) [*]
+  //- sh01 Siap, gue cariin dulu infonya ya... <set sholat_kota=<star>> {topic=random} <set mycontext=random>
+< topic
+
+> topic remindsholat inherits global
+  + [*] (@kotasholat1|@kotasholat2|@kotasholat3|@kotasholat4|@kotasholat5) [*]
+  - rs01 <set sholat_kota=<star>>Siap, gue bakal ingetin lo waktu sholat dan imsakiyah untuk kota <get sholat_kota>  {topic=random} <set mycontext=random>
+< topic
+
+> topic setcity1 inherits global
+  + [*] (@kotasholat1|@kotasholat2|@kotasholat3|@kotasholat4|@kotasholat5) [*]
+  - Oke deh! buat bikin notes reminder, lo bisa ketik kayak gini ya: <br>
+  ^ - Ingetin ada resepsi nikah lusa\n
+  ^ - Ingetin bangun pagi tiap jam 5\n
+  ^ - Ingetin bayar listrik tiap tanggal 5 juli\n
+  ^ - Ingetin meeting sama sales tiap senin jam 9.30 <set sholat_kota=<star>> {topic=random} <set mycontext=random>
+< topic
+
+> topic setcity2 inherits global
+  + [*] (@kotasholat1|@kotasholat2|@kotasholat3|@kotasholat4|@kotasholat5) [*]
+  - re01 OK <first_name>. <set sholat_kota=<star>> {topic=random} <set mycontext=random>
+< topic
+
+> topic setcity3 inherits global
+  + [*] (@kotasholat1|@kotasholat2|@kotasholat3|@kotasholat4|@kotasholat5) [*]
+  - sc01 Ok <first_name>, Bang Joni akan sesuaikan reminder-mu dengan waktu kota <set sholat_kota=<star1>> <get sholat_kota>  {topic=random} <set mycontext=random>
+< topic
+
+///////////////////////////////////START XTRANS
++ [*] [tolong|mau] [order|pesen|psn|booking] (travel|xtrans|xtran|xtransbj) [*]
+- xt01 Itu daftar pool keberangkatan Xtrans <br>
+^ Lo mau berangkat dari mana, <first_name>?\n
+^ Ketik aja nama poolnya (Contoh: Bale Xtrans) {topic=xtrans} <set mycontext=xtrans>
+
+> topic xtrans inherits global
+  + [*] (@city11) [*]
+  - xt02 Untuk keberangkatan dari <star>, ini pool tujuan yang bisa lo pilih yaa\n\n <set xtrans_pool=<star>>
+
+  + xt02aa
+  - Lo perginya kapan tuh?\n
+  ^ (Contoh: Hari ini, Besok, Lusa atau bisa ketik tanggalnya kayak gini, 31 Desember 2017) <br>
+  ^ Lo bisa booking tiketnya maksimal untuk 1 bulan ke depan loh!
+
+  + [*] (pagi ini|siang ini|sore ini|malam ini|hari ini|hr ini|bsok|besok|bsk|lusa|#@months|# @months|#@months@years|# @months @years) [*]
+  - Untuk berapa orang? <set xtrans_derpature_date=<star>>
+
+  + [*] # [*]
+  - xt03 Tunggu sebentar ya, gue cek jadwalnya dulu..<set xtrans_dewasa=<star>>
+
+  + xt03
+  - Itu jadwal keberangkatannya ya <br>
+  ^ Kalo mau mesen, lo tinggal ketik aja nomor pilihnya yang ada di sebelah kiri tuh {topic=xtranschoosesche} <set mycontext=xtranschoosesche>
+
+< topic
+
+> topic xtranschoosesche inherits global
+
+  + [*] (pagi ini|siang ini|sore ini|malam ini|hari ini|hr ini|bsok|besok|bsk|lusa|#@months|# @months|#@months@years|# @months @years)
+  - Untuk berapa orang? <set xtrans_derpature_date=<star>> {topic=xtrans}
+
+  + [*] # [*]
+  - xt04 Wokay! <br>
+  ^ Penumpangnya atas nama siapa nih?\n
+  ^ Nama lengkapnya yaa <set xtrans_pilih_no=<star>> {topic=xtranspassangerentry} <set mycontext=xtranspassangerentry>
+
+
+< topic
+
+> topic xtranspassangerentry inherits global
+  + [*]
+  - xt05
+
+  + xt06aa
+  - OK. <set xtrans_name=0>{topic=xtransseatentry} <set mycontext=xtransseatentry>
+
+
+< topic
+
+> topic xtransseatentry inherits global
+  + #
+  * <get xtrans_name> == 0 => xt07 <set xtrans_name=<star>>
+  - xt08 <set xtrans_hp=<star>>
+
+  + [*] (atm|mandiri ecash|bca klikpay|kartu kredit|tcash|cimb clicks|mandiri clickpay|indomaret|xl tunai) [*]
+  - xt09 <set xtrans_payment=<star>>
+
+  + xt07aa
+  - OK. {topic=random} <set mycontext=random>
+
+
+< topic
+
+///////////////////////////////////START UBER
++ [*] [tolong|mau] [order|pesen|psn|booking] (taksi|taxi|uber|uberbj) [*]
+//- ub01 Sip, sekarang share lokasi lo dengan cara click tombol + (sebelah tombol emoticon) {topic=uber}  <set mycontext=uber>
+- Yah maaf ya <first_name>, gue belom bisa panggilin Uber buat lo nih. <br>
+^ Sistem gue masih di-upgrade ke versi baru supaya nanti mesenya lebih gampang. <br>
+^ Tungguin yaa ;)
+
++ ubertest
+- ub01 Sip, sekarang share lokasi lo dengan cara click tombol + (sebelah tombol emoticon) {topic=uber}  <set mycontext=uber>
+
+> topic uber inherits global
+  + [*] (ga jadi|gak jadi|nggak jadi|cancel|batal|batalin|enggak jadi|nanti aja|tidak jadi|ga|gak|nggak) [*]
+  - ch02 Oke, gue batalin nih ya Uber-nya.{topic=random} <set mycontext=random>
+
+  + ub02a
+  - Sekarang share lokasi tujuanmu dengan cara click tombol + sebelah tombol smile dan tap Share Location
+
+  + ub02
+  - ub02 Tuh udah Bang Joni cariin Uber, cuma buat kamu. Tinggal pilih aja mau naik motor apa mobil...
+
+  + exittorandom
+  - exittorandom {topic=random} <set mycontext=random>
+
+  + [*] (lupa|password|pasword) [*]
+  - Coba inget-inget dulu password Uber-nya. <br>
+  ^ Gue perlu itu untuk pertama kali pesen Uber, nanti setelahnya bisa langsung kok, nggak harus login lagi. {topic=random} <set mycontext=random>
+
+  + [*] (ubermotor|uberx|uber x|ubermobil|uber mobil|uber motor) [*]
+  - ub03 Oke, pilih metode pembayaran di atas yak <set uber_product=<star1>>
+
+  + [*] (yes|ok|lanjut|oke|ya) [*]
+  - ub03 Oke, pilih metode pembayaran-nya:
+
+  + [*] (cash|mastercard|visa) [*]
+  - ub04 Sip, gue cariin dulu driver-nya ya, nanti gue kabarin kalo udah dapet. <set uber_payment=<star1>>
+
+  + ub04
+  - ub04 Sip, gue cariin dulu driver-nya ya, nanti gue kabarin kalo udah dapet. <set uber_payment=<star1>>
+
+< topic
+
+///////////////////////////////////START ZOMATO
++ [*] (restoran|makan|makanan|zomato|makanbj) [*]
+- zo00 Oke! Pake fitur share location lo ya untuk menentukan lokasi pencarian restoran (tombol + samping tombol emoticon)<br>
+^ Lo bisa share lokasi lo sekarang ini atau bisa juga share lokasi lain.<br>
+^ Nanti gue kasih info restoran dengan review terbaik di Zomato berdasarkan lokasi yang lo pilih :9 {topic=zomato} <set mycontext=zomato>
+
++ [*] (laper|lapar) [*]
+- zo00 Sini gue kasih tau tempat makan yang enak.\n\n
+^ Pake fitur share location lo ya untuk menentukan lokasi pencarian restoran (tombol + samping tombol emoticon)<br>
+^ Lo bisa share lokasi lo sekarang ini atau bisa juga share lokasi lain<br>
+^ Nanti gue kasih info restoran dengan review terbaik di Zomato berdasarkan lokasi yang lo pilih :9 {topic=zomato} <set mycontext=zomato>
+
++ [*] [masakan|makanan] (@cuisine1|@cuisine2|@cuisine3) [di|daerah] (@location1|@location2|@location3)
+- zo01 Ini nih 3 tempat makan dengan rating tertinggi <set zomato_cuisine=<star1>> <set zomato_location=<star2>>
+
++ zomato lainnya
+- zo03 Sekarang, pilih jenis masakan yang lo mau. Langsung ketik ajaa.. <set mycontext=zomato>
+
+> topic zomato inherits global
+  + [*] (@cuisine1|@cuisine2|@cuisine3) [*]
+  - zo02 Oke <first_name>! Ini nih tempat makan dengan review tertinggi di Zomato. <set zomato_cuisine=<star1>>
+< topic
+
+///////////////////////////////////START CUACA
++ [*] (@cuaca) [*] {weight=10}
+- we01 Oke! Pake fitur share location lo ya untuk menentukan lokasinya (tombol + samping tombol emoticon).<br>
+^ Lo bisa share lokasi lo sekarang ini atau bisa juga share lokasi lain.<br>
+^ Nanti gue kasih info perkiraan cuaca berdasarkan lokasi yang lo pilih ;)
+
++ [*] [@hariini|@besok] (@ujan) [*] {weight=10}
+- we01 Nggak tau juga deh, coba gue cek ya!\n\n
+^ Pake fitur share location lo ya untuk menentukan lokasinya (tombol + samping tombol emoticon)\n\n
+^ Lo bisa share lokasi lo sekarang ini atau bisa juga share lokasi lain.<br>
+^ Nanti gue kasih info perkiraan cuaca berdasarkan lokasi yang lo pilih ;)
+
+///////////////////////////////////START INFO TOL
++ [*] (tol|macet|tolbj|infotol|info tol) [*]
+- Jalan tol mana <first_name>?\n\n
+^ (Jagorawi, Cawang, Dalam Kota, JORR, Cikampek, Tangerang, Bandung, Cileunyi, Palimanan, Kanci)
+
++ [*] (tol|macet|tolbj|infotol|info tol) [*] (@toljasamarga1|@toljasamarga2) [*]
+- to01 Ok, gue cariin dulu infonya ya.. <set tol_name=<star2>>
+
++ [*] (@toljasamarga1|@toljasamarga2) [*]
+- to01 Ok, gue cariin dulu infonya ya.. <set tol_name=<star1>>
+
+
+///////////////////////////////////START SKYSCANNER Edited by AWK 2017-01-04 03:00
+//+ [*] (@pesawat) [*]
+//- fl00 Nyari tiket pesawat murah? Emang paling bener deh nanya sama gue :D <br>
+//^ Nah ini nih destinasi yang paling banyak dicari sama orang-orang
+
+//+ get a friend
+//- mgm00 URL: https://line.me/R/ti/p/%40bangjoni <br>
+//^ Invitation code: <invitation_code> <br>
+//^ Copy-paste URL dan invitation code di atas terus share ke temen-temen lo, sebanyak-banyaknya!\n\n
+//^ Tiap satu temen yang add gue pake invitation code dari lo, lo bakal dapet saldo BJPay sebesar Rp 500. Lumayan banget kan!<br>
+//^ Kumpulin saldo BJPay sebanyak-banyaknya biar bisa lo beliin pulsa.\n\n
+//^ Jangan lupa loh! Sebelum ikutan promo ini lo udah harus punya akun BJPay. Buat yang belum punya, langsung chat gue dan ketik BJPAY REGISTER, cuss!
+
++ mgmrefcodenotfound
+- mgm01 Oops, invitation code yang lo input nggak terdaftar tuh. Coba cek lagi deh.
+- mgm01 Oops, invitation code-nya salah tuh. Coba cek lagi gih.
+
++ mgmhasbeenused
+- mgm02 Oops, invitation code yang lo input udah pernah lo pake sebelumnya.
+//- mgm02 Invitation codenya udah pernah kamu pake
+
++ mgmbjpaynotregistered
+- mgm03 Eittss.. Sebelom ikutan promo ini, lo mesti punya akun BJPay dulu. Ketik BJPAY REGISTER, sekarang!
+
+
+//+ ref (*)
+//- mgm03 Selamat, lo dapet saldo BJPay sebesar Rp 5000 dari invitation code yang lo input. Untuk mengaktifkan akun BJPay lo, silakan ketik BJPAY REGISTER.\n\n
+//^ Mau tambahan saldo lagi? Lo bisa dapetin saldo BJPay Rp 500 tiap ajak temen lo buat add gue di Line. Info lebih lengkapnya bisa lo cek di http://line.me/R/home/public/post?id=bangjoni&postId=1148515416806026326 <set ref_code=<star>>
+
++ mgmsuccessref
+- Selamat, lo mendapatkan tambahan saldo BJPay Rp 500,-
+
+
++ bjpaybalancecheck
+- Saldo BJPay lo saat ini adalah Rp <bjpay_balance>
+
++ bjsysfail
+- Wah sori nih, kayaknya lagi ada yang error di sistem deh. <br>
+^ Gue cek dulu deh.. Nanti coba hubungin gue lagi yaa ;)
+- Waduh! Bentar ya.. Kayaknya ada yang error nih di sistem. <br>
+^ Gue cek dulu deh. Coba nanti hubungin gue lagi ya..
+
+
++ [*] transportasi lainnya [*]
+- gr02 Oke deh! Silakan pilih jenis transportasi lain di bawah ini yaa..
+
++ [*] info lainnya [*]
+- gr03 Oke deh! Silakan pilih informasi lain di bawah ini yaa..

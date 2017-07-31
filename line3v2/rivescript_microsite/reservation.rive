@@ -1,0 +1,55 @@
++ [*] (@halo) [*]
+- gr01
+
++ userexittorandom
+- {topic=random} <set mycontext=random>
+
++ usertrypin
+- {topic=pin_saldo} <set mycontext=pin_saldo>
+
++ [*] (@registrasi) [*]
+- rg00 Oke, sebelum daftar UnikQu Maya minta data-data kamu dulu ya!
+^ Maya minta NOMOR HP yang mau kamu daftarin UnikQu. Contoh: 08xxxxxxxxxx {topic=no_hp}
+
+> topic no_hp
+
+  + *
+  - rg01 Nanti Maya akan kirim SMS kode verifikasi ke nomor HP yang kamu daftarin ini. {topic=otp}
+
+< topic
+
+> topic otp
+
+  + *
+  - rg02 {topic=email}
+
+< topic
+
++ [*]cek saldo[*]
+- ck00 Oke, sebelumnya, masukkan PIN UnikQu kamu untuk proses verifikasi. {topic=pin_saldo}
+
+> topic pin_saldo
+
+  + *
+  - ck01 {topic=random}
+
+< topic
+
++ [*]pulsa[*]
+- pu00
+//Oke, sebelumnya, masukkan PIN UnikQu kamu untuk proses verifikasi. <topic=pin_pulsa>
+//> topic pin_pulsa
+//  + *
+//  - pu01 Oke, Maya bantu ya. Silakan ketik nomor HP-nya. {topic=input_no_hp}
+//< topic
+//> topic input_no_hp
+// + *
+//  - pu02 Sekarang pilih nominal pulsa yang kamu mau di bawah ini. {topic=nominal_pulsa}
+//< topic
+//> topic nominal_pulsa
+//  + *
+//  - pu03 {topic=nominal_pulsa}
+//< topic
+
++ *
+- Mohon maaf, Maya belum dapat menjawab pertanyaan Anda

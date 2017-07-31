@@ -1,0 +1,431 @@
+! version = 2.0
+! BJ = V2
+
+! array city1 = ambon|bajawa|balikpapan|bpp|banda aceh|aceh|bandung|bdg|banjarmasin|banyuwangi|batam|baubau|bengkulu|berau|biak|bima|buli|buol|denpasar|dps|bali|ende|fakfak|gorontalo|gunungsitoli|jakarta|cengkareng|jkt|halim perdanakusuma|halim|halimperdanakusuma|jambi|jayapura|kaimana|kendari|kotabaru|kupang|labuanbajo|labuha|lampung|lhokseumawe|lombok|mataram|luwuk|malang|mamuju|manado|manokwari|maumere|medan|mdn|kuala namu|kualanamu|melanguane|merauke|meulaboh|nabire|natunaranai|padang|palangka raya|palangkaraya|palembang|palu|pangkal pinang|pangkalpinang|pangkalan bun|pangkalanbun|pekanbaru|pomalaa|pontianak|poso|pulau alor|pulaualor|ruteng|sampit|semarang
+! array city2 = sibolga|silangit|sinabang|solo|sorong|sumbawa|surabaya|sby|sub|tahuna|tambolaka|tanjung pandan|tanjungpandan|tanjung pinang|tanjungpinang|tarakan|ternate|timika|tobelo|tual|makassar|mks|ujungpandang|waingapu|wakatobi|wangi wangi|wangiwangi|yogyakarta|yogya|jogya|jogja|jgj|adelaide|alice springs|alicesprings|brisbane|cairns|coffs harbour|coffsharbour|darwin|gold coast|goldcoast|hobart|mackay whitsundays|mackay|melbourne|perth|sunshine coast|sunshinecoast|sydney|chittagong|delhi|dhaka|brunei|phnom penh|phnompenh|siem reap|siemreap|beijing|chengdu|chongqing|guangzhou|guilin|haikou|hangzhou|kunming|nanning|ningbo|qingdao|shanghai|shenyang|shenzhen|tianjin
+! array city3 = wuhan|xian|colombo|hong kong|hongkong|ahmedabad|bangalore|chennai|hyderabad|kochi|kolkata|mumbai|thiruvananthapuram|tiruchirapalli trichy|fukuoka|nagoya|okinawa - naha|okinawa|osaka - kansai|osaka|sapporo - shin-chitose|sapporo|tokyo - haneda|haneda|tokyohaneda|tokyo - narita|narita|tokyonarita|tokyo|vientiane|macau|alor setar|alorsetar|bintulu|johor baru|johorbaru|kota bharu|kotabharu|kota kinabalu|kotakinabalu|kinabalu|kuala lumpur|kualalumpur|malaysia|kuala terengganu|kualaterengganu|kuching|langkawi|malacca|miri|penang|sandaka|sibu|subang|tawau|mandalay|yangoon|kathmandu|bacolod|cebu|clark manila|clark|davao|iloilo|manila naia|manila
+! array city4 = puerto princesa|puertoprincesa|tacloban|jeddah|singapore|singapor|singapura|singgapur|sing|busan|seoul|taipei|bangkok|thailand|don mueang|donmueang|chiang mai|chiangmai|chiang rai|chiangrai|hat yai|hatyai|krabi|nakhon phanom|nakhonphanom|nakhon si thammarat|nakhonsithammarat|narathiwat|phuket|surat thani|suratthani|trang|ubon ratchathani|ubonratchathani|udon thani|udonthani|dili|abu dhabi|abudhabi|da nang|danang|hanoi|london gatwick|london|ho chi minh city|hochiminh
+! array city5 = aekloba|alastuwa|ambarawa|angke|argopuro|arjasa|arjawinangun|awipari|babadan|babakan|babat|bagor|bajalinggei|bamban|bandar kalipah|bandar tinggi|bandung|bangil|bangoduwa|bangsalsari|banjar|banjarsari|banyuwangi baru|barat|baron|batang|batang kuis|batu tulis|baturaja|bekasi|bekri|benowo|binjai|blambanganpagar|blambanganumpu|blimbing|blimbing pendopo|blitar|bogor|boharan|bojonegoro|bojong|bowerno|brambanan|brebes|brumbung|bulakamba|bumiayu|bungamas|candimas|caruban|catang|cepu|cerme|ciamis|cianjur|ciawi|cibadak|cibatu|cibeber|cibungur|cicalengka|cicayur|cicurug|ciganea|cigombong|cikadongdong|cikampek|cikarang|cikeusal|cikudapateuh|cilacap
+! array city6 = cilaku|cilame|ciledug|cilegeh|cilegon|cilejit|cimahi|cimekar|cimindi|cipari|cipeundeuy|cipunegara|cirebon|cirebon prujakan|cireungas|ciroyom|cisaat|cisauk|cisomang|citeras|comal|curahmalang|daru|dawuan|denpasar|dolokmerangir|doplang|duduk|duku|duri|gadobangkong|gambir|gandasolih|gandrungmangun|garahan|garum|gedangan|gedebage|gembong|geneng|giham|glenmore|gombong|grati|gubug|gumilir|gundih|gunungmegang|hajipemanggilan|haurgeulis|haurpugur|hengelo|ijo|indralaya|indralaya|jakarta kota|jambon|jambu baru|jatibarang|jatinegara|jatiroto|jember|jenar|jeruklegi|jombang|kalibalangan|kalibaru|kalibodri|kalisat|kalisetail|kalitidu|kaliwungu
+! array city7 = kampung bandan|kandangan|kapas|karang sari|karang tengah|karangantu|karanganyar|karangasem|karangjati|karangsari|karangsuwung|karawang|kawunganten|kebasen|kebayoran|kebonromo|kebumen|kedinding|kediri|kedokangabus|kedungbanteng|kedunggalar|kedunggedeh|kedungjati|kemayoran|kemiri|kemranjen|kepanjen|kertapati|kertasemaya|kertosono|kesamben|ketanggungan|ketanggungan barat|ketapang|kiaracondong|kisaran|klakah|klari|klaten|kosambi|kotabumi|kotapadang|kotok|kradenan|kras|krenceng|krengseng|kretek|krian|kroya|kuraitaji|kutoarjo|kutowinangun|labuanratu|lahat|lamongan|lampegan|langen|larangan|larangan|lawang|lebakjero|lebeng|leces|ledokombo|leles
+! array city8 = lemahabang|lempuyangan|leuwi goong|lidah tanah|limapuluh|linggapura|losari|lubuk alung|lubuk linggau|lubukpakam|lubukrukam|luwung|madiun|maguwo|maja|malang|malang kota lama|malasan|manggarai|mangkang|manonjaya|maos|marbau|martapura|masaran|maseng|maswati|medan|meluwung|membang muda|merak|minggiran|mojokerto|mrawan|muara enim|muarasaling|nagreg|negararatu|negeriagung|ngadiluwih|nganjuk|ngebruk|ngrombro|ngunut|notog|padalarang|padang|padanghalaban|pagergunung|pakishaji|paledang|palmerah|pamingke|paninjawan|panunggalan|papar|pariaman|paron|parung kuda|parung panjang|pasar senen|pasuruan|patuguran|pauhkambar|pegadenbaru|pekalongan|pemalang
+! array city9 = perbaungan|perlanaan|petarukan|peterongan|plabuan|plered|pohgajih|pondok ranji|porong|prabumulih|prembun|probolinggo|prupuk|pucuk|puluraja|purwakarta|purwoasri|purwokerto|purwosari|rajapolah|rambipuji|rampah|rancaekek|randegan|randegan|randuagung|randublatung|rangkasbitung|rantau prapat|rejosari|rejotangan|rendeh|rengas|rogojampi|sadang|salem|saradan|sasaksaat|saungnaga|sedadi|seibejangkar|semarang poncol|semarang tawang|sembung|sempolan|sentolo|sepanjang|serang|serpong|siantar|sidareja|sidoarjo|sikampuh|sindanglaut|singojuruh|singosari|slawi|solobalapan|solojebres|songgom|sragen|sragi|srowot|sruweng|sudimara|sukabumi|sukatani|sukomoro
+! array city10 = sukorejo|sulusuban|sumbergempol|sumberlawang|sumberpucung|sumberrejo|sumberwadung|sumlaran|sumobito|sumpiuh|surabaya gubeng|surabaya kota|surabaya pasar turi|surodadi|susuhan|tabing|talun|tambak|tambun|tanah abang|tandes|tangerang|tanggul|tanggulangin|tanjung|tanjung priuk|tanjungbalai|tanjungkarang|tanjungrasa|tarik|tasikmalaya|tebing tinggi|tebing tinggi|tegal|tegineneng|telawa|temuguruh|tenjo|terisi|testes|tigaraksa|tigaraksa|tonjong baru|tugu yogyakarta|tulangan|tulungagung|tulungbuyut|ujanmas|ujungnegoro|wadu|walantaka|walikukun|waru|waruduwur|warung bandrek|wates|waytuba|weleri|wilangan|wlingi|wonokerto|wonokromo|wonokromox|wonosari
+! array city11 = bale xtrans|bsm|btp|de batara|green batara|mtc|oncom raos|pasteur|pt inti|bekasi|bandara soeta(cgk)|bintaro|blok m|bsd|cibubur|jatiwaringin|karawaci|kelapa gading|pancoran|pondok indah|semanggi|tomang|batang|pekalongan|laweyan|pabelan|solo|jatingaleh|kendal|semarang|tembalang|jogja|jombor|blora|bumi serpong damai|bandung super mall|bandung timur plaza|metro indah mall
+! array months = jan|feb|mar|apr|mei|jun|jul|aug|sept|okt|nov|des|januari|februari|maret|april|mei|juni|juli|agustus|september|oktober|november|desember
+! array years = 2015|2016|2017
+! array maskapai = garuda|citilink|lion|lion air|airasia|air asia|batik|sriwijaya|sitilink|batik air|batikair|lionair|garuda indonesia|sriwijaya air
+! array cititrans = bandung|bdg|jakarta|jkt|dipati ukur|pasteur|ciwalk|tsm|kelapa gading|central park|fatmawati|kuningan|semanggi|bintaro|soetta|soeta|bandara sukarno hatta|sukarno hatta
+! array cuisine1 = aceh|american|amerika|amrik|arab|arabian|asia|asian|autralia|australi|ausie|aussie|bakery|roti|bakmi|mi|mie|bakso|baso|balinese|bali|bangka|batak|belanda|betawi|beverages|minuman|british|inggris|bubble tea|bubbletea|burger|cafe|kafe|caribbean|karibia|chinese|cina|china|coffee and tea|teh dan kopi|teh|kopi|continental|kontinental|deli|desserts|dessert|pencuci mulut|dimsum|dim sum|drinks only|european|eropa|finger food|cemilan|camilan|kudapan|snack|snacks|french|prancis|perancis|german|jerman|greek|yunani|grill|panggang|healthy food|makanan sehat|ice cream|es krim|eskrim|indian|india
+! array cuisine2 = indonesian|indo|indonesia|irish|irlandia|italian|italia|itali|japanese|japan|jepang|jawa|javanese|java|juices|juice|jus|kalimantan|kebab|korean|korea|lebanese|lebanon|lombok|makassar|malaysian|malaysia|melayu|manado|medan|mediterranean|mediterania|mexican|mexico|middle eastern|timur tengah|mongolian|mongolia|north indian|india utara|padang|padangnese|pakistani|pakistan|palembang|peranakan|pizza|piza|portuguese|portugese|portugis|ramen|satay|sate|seafood|sea food|makanan laut|hidangan laut|singaporean|singapore|singapur|singapura|spore|soto|south indian|india selatan
+! array cuisine3 = spanish|spanyol|steakhouse|steak house|steak|steik|street food|jajanan|streetfood|kaki lima|jajan|sulawesi|sumatera|sumatra|sunda|sundanese|sushi|taiwanese|taiwan|tex mex|texmex|mexico|meksiko|thai|thailand|turkish|turki|vietnamese|vietnam|western|barat|yogyakarta|yogya|jogja|jogjakarta
+! array location1 = ancol|angke|muara angke|bantar gebang|bantargebang|beji|bekasi barat|bekasi selatan|bekasi timur|bekasi utara|benda|bendungan hilir|benhil|bintaro|blok m|bogor barat|bogor selatan|bogor tengah|bogor timur|bogor utara|bojongsari|bojong sari|cakung|cawang|cempaka putih|cengkareng|cibodas|cibubur|cijantung|cikini|cilandak|ciledug|cililitan|cilincing|cilodong|cimanggis|cinere|cipayung|cipinang|cipondoh|ciputat|ciputat timur|daan mogot|dharmawangsa|darmawangsa|duren sawit|fatmawati|gajah mada|gajahmada|gambir|gandaria|gatot subroto|gatsu|green garden|green ville|greenville|grogol|gunung sahari|hayam wuruk|jagakarsa
+! array location2 = jatiasih|jati asih|jatinegara|jatisampurna|jelambar|kalibata|xbata|kalideres|xderes|kalimalang|xmalang|kampung melayu|karang tengah|karawaci|karet|kebayoran lama|kebon jeruk|kecamatan tangerang|tangerang|tanggerang|kedoya|kelapa gading|gading|kemang|kemanggisan|kemayoran|kembangan|klender|koja|kota|kramat jati|kuningan|larangan|lebak bulus|limo|makasar|mampang prapatan|mampang|mangga besar|mangga dua|manggarai|matraman|medan satria|melawai|menteng|meruya|muara karang|mustikajaya|mustika jaya|neglasari|pademangan|palmerah|pamulang|pancoran|pancoran mas|pantai indah kapuk|pik|pasar baru|pasar minggu|pecenongan
+! array location3 = penjaringan|periuk|priuk|pesanggrahan|pesanggerahan|pinang|pinang ranti|pinangranti|pluit|pondok aren|pondok bambu|pondok gede|pondok indah|pondok melati|pulo gadung|pulogadung|puri indah|puri|rawalumbu|rawa lumbu|rawamangun|roxy|scbd|sawah besar|sawangan|senayan|senen|senopati|serpong|serpong utara|setiabudi|stiabudi|setu|slipi|sudirman|sukmajaya|sunter|taman mini|taman sari|tamansari|tambora|tanah abang|tana abang|tenabang|tanah sareal|tanjung duren|tanjung priok|priok|tapos|tebet|thamrin|tomang
+! array toljasamarga1 = cililitan|taman mini|dukuh|pasar rebo|cibubur|cibubur utama|cisalak|cimanggis utama|cimanggis|gunung putri|jagorawi|cawang|tebet|kuningan|semanggi|senayan|pejompongan|slipi|tanjung duren|tomangjelambar|angke|dalam kota|dalkot|halim|pondok gede barat|pondok gede timur|cikunir|bekasi barat|bekasi timur|tambun|cibitung|cikarang utama|cikarang barat|cibatu|cikarang timur|karawang barat|karawang timur|dawuan|kalihurip|cikampek|cikopo|kebon jeruk|meruya|meruya utara|kembangan selatan|karang tengah|karang tengah barat
+! array toljasamarga2 = kunciran|tangerang|karawaci|bitung|joglo|cileduk|dawuan|sadang|jatiluhur|cikamuning|padalarang barat|padalarang|pasteur|pasir koja|kopo|mohammad toha|buah batu|gedebage|cileunyi|baros|purbaleunyi|purbalenyi|cipularang|bandung|veteran|ciputat|pondok pinang|fatmawati|ampera|lenteng agung|gedong|kampung rambutan|bambu apus|setu|jatiwarna|jatiasih|kalimalang|bintara|cakung barat|cakung timur|rorotan|cilincing|jorr|lingkar luar|palimanan|plumbon|ciperna|kanci|cipali|cikapali|serpong|bsd|bintaro|ulujami
+! array kotashol = madiun|jakarta
+! array kotasholat1 = ambarawa|ambon|amlapura|amuntai|argamakmur|atambua|babo|bagan siapiapi|bahaur kalteng|bajawa|balige|balikpapan|banda aceh|bandar|bandung|bangkalan|bangkinang|bangko|bangli|banjar|banjarbaru|banjarmasin|banjarnegara|bantaeng|banten|bantul|banyuwangi|barabai|barito|barru|batam|batang|batu|baturaja|batusangkar|baubau|bekasi|bengkalis|bengkulu|benteng|biak|bima|binjai|bireuen|bitung|blitar|blora|bogor|bojonegoro|bondowoso|bontang|boyolali|brebes|bukittinggi|bula sbt|bulukumba|buntok|cepu|ciamis|cianjur|cibinong|cilacap|cilegon|cimahi|cirebon|curup|demak|denpasar|depok|dili|dompu|donggala|dumai|ende|enggano|enrekang
+! array kotasholat2 = fakfak|garut|gianyar|gombong|gorontalo|gresik|gunung sitoli|indramayu|jakarta|jkt|jakarta barat|jakarta pusat|jakarta selatan|jakarta timur|jakarta utara|jambi|jayapura|jember|jeneponto|jepara|jombang|kabanjahe|kalabahi|kalianda|kandangan|karanganyar|karawang|kasungan|kayuagung|kebumen|kediri|kefamenanu|kendal|kendari|kertosono|ketapang|kisaran|klaten|kolaka|kota baru pulau laut|kotabumi|kota jantho|kotamobagu|kuala kapuas|kuala kurun|kuala pembuang|kuala tungkal|kudus|kuningan|kupang|kutacane|kutoarjo|labuhan|lahat|lamongan|langsa|larantuka|lawang|lhoseumawe|limboto|lubuk basung|lubuk linggau|lubuk pakam|lubuk sikaping|lumajang|luwuk
+! array kotasholat3 = madiun|magelang|magetan|majalengka|majene|makale|makassar|malang|mamuju|manna|manokwari|marabahan|maros|martapura|masamba|masohi|mataram|maumere|medan|mempawah|menado|mentok|merauke|metro|meulaboh|mojokerto|muara bulian|muara bungo|muara enim|muara teweh|muaro sijunjung|muntilan|nabire|negara|nganjuk|ngawi|nunukan|pacitan|padang|padang panjang|padang sidempuan|pagaralam|painan|palangkaraya|palembang|palopo|palu|pamekasan|pandeglang|pangka|pangkajene sidenreng|pangkalan bun|pangkalpinang|panyabungan|par|parepare|pariaman|pasuruan|pati|payakumbuh|pekalongan|pekan baru|pemalang|pematangsiantar|pendopo|pinrang|pleihari
+! array kotasholat4 = polewali|pondok gede|ponorogo|pontianak|poso|prabumulih|praya|probolinggo|purbalingga|purukcahu|purwakarta|purwodadigrobogan|purwokerto|purworejo|putussibau|raha|rangkasbitung|rantau|rantauprapat|rantepao|rembang|rengat|ruteng|sabang|salatiga|samarinda|sambas|sampang|sampit|sanggau|sawahlunto|sekayu|selong|semarang|sengkang|serang|serui|sibolga|sidikalang|sidoarjo|sigli|singaparna|singaraja|singkawang|sinjai|sintang|situbondo|slawi|sleman|soasiu|soe|solo|solok|soreang|sorong|sragen|stabat|subang|sukabumi|sukoharjo|sumbawa besar|sumedang|sumenep|sungai liat|sungai penuh|sungguminasa|surabaya|surakarta|tabanan|tahuna
+! array kotasholat5 = takalar|takengon|tamiang layang|tanah grogot|tangerang|tanjung balai|tanjung enim|tanjung pandan|tanjung pinang|tanjung redep|tanjung selor|tapak tuan|tarakan|tarutung|tasikmalaya|tebing tinggi|tegal|temanggung|tembilahan|tenggarong|ternate|tolitoli|tondano|trenggalek|tual|tuban|tulungagung|ujung berung|ungaran|waikabubak|waingapu|wamena|watampone|watansoppeng|wates|wonogiri|wonosari|wonosobo|yogyakarta
+! array digit = 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31
+! array person = orang|dewasa|org
+! array child = anak|ank
+! array infant = bayi
+! array order = booking|pilih|book|no|nomor|order
+! array eurosoccer = albania|austria|belgium|croatia|czech|england|france|germany|hungary|iceland|ireland|italy|poland|portugal|romania|russia|slovakia|spain|sweden|switzerland|turkey|ukraine|wales
+! var mycontext = random
+! array monthnum = 01|02|03|04|05|06|07|08|09|10|11|12
+! array daynum = 01|02|03|04|05|06|07|08|09|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31
+
+! array halo = hi|halo|hai|hello|eh|hei|oi|hallo|helo|alo|hay|uy|haiii|hy|haloo|bang|abang|bang joni|bangjon|bang jon|jon|joni|bangjoni|hola
+! array assalamualaikum = assalamualaikum|asalamualaikum|salamualaikum|samlekum|asalammualaikum
+! array salamkenal = slam kenal|slm kenal|lam kenal|salm kenal|salam knal|salam knl|salken|lam nal|sal ken|salam kenal|salamkenal
+! array pesawat = pesawat|psw|pswt|pesawar|psawat|pswat|pesawt
+! array city1 = ambon|bajawa|balikpapan|bpp|banda aceh|aceh|bandung|bdg|banjarmasin|banyuwangi|batam|baubau|bengkulu|berau|biak|bima|buli|buol|denpasar|dps|bali|ende|fakfak|gorontalo|gunungsitoli|jakarta|cengkareng|jkt|halim perdanakusuma|halim|halimperdanakusuma|jambi|jayapura|kaimana|kendari|kotabaru|kupang|labuanbajo|labuha|lampung|lhokseumawe|lombok|mataram|luwuk|malang|mamuju|manado|manokwari|maumere|medan|mdn|kuala namu|kualanamu|melanguane|merauke|meulaboh|nabire|natunaranai|padang|palangka raya|palangkaraya|palembang|palu|pangkal pinang|pangkalpinang|pangkalan bun|pangkalanbun|pekanbaru|pomalaa|pontianak|poso|pulau alor|pulaualor|ruteng|sampit|semarang
+! array city2 = sibolga|silangit|sinabang|solo|sorong|sumbawa|surabaya|sby|sub|tahuna|tambolaka|tanjung pandan|tanjungpandan|tanjung pinang|tanjungpinang|tarakan|ternate|timika|tobelo|tual|makassar|mks|ujungpandang|waingapu|wakatobi|wangi wangi|wangiwangi|yogyakarta|yogya|jogya|jogja|jgj|adelaide|alice springs|alicesprings|brisbane|cairns|coffs harbour|coffsharbour|darwin|gold coast|goldcoast|hobart|mackay whitsundays|mackay|melbourne|perth|sunshine coast|sunshinecoast|sydney|chittagong|delhi|dhaka|brunei|phnom penh|phnompenh|siem reap|siemreap|beijing|chengdu|chongqing|guangzhou|guilin|haikou|hangzhou|kunming|nanning|ningbo|qingdao|shanghai|shenyang|shenzhen|tianjin
+! array city3 = wuhan|xian|colombo|hong kong|hongkong|ahmedabad|bangalore|chennai|hyderabad|kochi|kolkata|mumbai|thiruvananthapuram|tiruchirapalli trichy|fukuoka|nagoya|okinawa - naha|okinawa|osaka - kansai|osaka|sapporo - shin-chitose|sapporo|tokyo - haneda|haneda|tokyohaneda|tokyo - narita|narita|tokyonarita|tokyo|vientiane|macau|alor setar|alorsetar|bintulu|johor baru|johorbaru|kota bharu|kotabharu|kota kinabalu|kotakinabalu|kinabalu|kuala lumpur|kualalumpur|malaysia|kuala terengganu|kualaterengganu|kuching|langkawi|malacca|miri|penang|sandaka|sibu|subang|tawau|mandalay|yangoon|kathmandu|bacolod|cebu|clark manila|clark|davao|iloilo|manila naia|manila
+! array city4 = puerto princesa|puertoprincesa|tacloban|jeddah|singapore|singapor|singapura|singgapur|sing|busan|seoul|taipei|bangkok|thailand|don mueang|donmueang|chiang mai|chiangmai|chiang rai|chiangrai|hat yai|hatyai|krabi|nakhon phanom|nakhonphanom|nakhon si thammarat|nakhonsithammarat|narathiwat|phuket|surat thani|suratthani|trang|ubon ratchathani|ubonratchathani|udon thani|udonthani|dili|abu dhabi|abudhabi|da nang|danang|hanoi|london gatwick|london|ho chi minh city|hochiminh
+! array months = jan|feb|mar|apr|mei|jun|jul|aug|sept|okt|nov|des|januari|februari|maret|april|mei|juni|juli|agustus|september|oktober|november|desember|january|february|pebruari|march|april|may|june|july|august|aug|october|oct|nopember|december|dec
+! array bulan = 01|1|02|2|03|3|04|4|05|5|06|6|07|7|08|8|09|9|10|11|12
+! array years = 17|18|2017|2018
+! array hariini = hari ini|hr ini|hri ini|hariini
+! array besok = besok|bsok|bsk
+! array pp = pp|pulang pergi|pulangpergi|plg pergi|plg prgi|pulang prgi
+! array oneway = sekali jalan|1x jalan|skali jalan|skli jalan|sekali jlan|sekali jln|sekali jaln|1x jln|1x jlan|1x jaln|1 x jln|1 x jlan|1 x jaln|1 x jalan|one way|oneway
+! array bangjoni = bang joni|abang|bang|bang jon|bangjon|jon|joni|bro|sob|bos|bangjoni|bang
+! array test = test|tes|tez|tess|testing
+! array salam kenal = slam kenal|slm kenal|lam kenal|salm kenal|salam knal|salam knl|salken|lam nal|sal ken|salam kenal|salamkenal
+! array bosen = bosen|bosan|bt|bete
+! array nggak = nggak|gak|enggak|engga|gk|tidak|tdk|ngga|gamau|nggamau|g
+! array mau = mau|ok|ya|boleh|iya
+! array hurufb = huruf B|huruf bnya|huruf b-nya
+! array gaujan = nggak ujan|nggak hujan|ngga ujan|ngga hujan|enggak ujan|enggak hujan|engga ujan|engga hujan|gak ujan|gak hujan|ga ujan|ga hujan|gaujan
+! array nyerah = nyerah|nggak tau|gatau|enggak tau|gak tau|engga tau|ngga tau
+! array lagiapa = lagi apa|lagiapa|lg apa|lgi apa|lagi ngapain|lgi ngapain|lg ngapain|gi apa
+! array makian = tai|babi|monyet|titit|memek|anjing|ngentot|kupret|kambing|peler|pler|kontol|goblok|goblog|suek|jing|njing|tolol|fak|fuck|kambing|tete|tetek|toket
+! array pesawat = pesawat|pswt|psawat|pswat|psawt
+! array cuaca = cuaca|suhu|hujan|panas|suhunya|cuacanya|cuacabj|hari ini bakal ujan gak ya bang|hari ini ujan gak bang|hari ini ujan gak ya|hari ini bakal ujan gak ya| hari ini ujan gak|hari ini bakal ujan nggak ya bang|hari ini ujan nggak bang| hari ini ujan nggak ya|hari ini bakal ujan nggak ya|hari ini ujan nggak|hari ini bakal ujan ngga ya bang|hari ini ujan ngga bang|hari ini ujan ngga ya|hari ini bakal ujan ngga ya|hari ini ujan ngga|hari ini bakal ujan ga ya bang|hari ini ujan ga bang|hari ini ujan ga ya|hari ini bakal ujan ga ya|hari ini ujan ga
+! array halo = hi|halo|hai|hello|eh|hei|oi|hallo|helo|alo|hay|uy|haiii|hy|haloo|bang|abang|bang joni|bangjon|bang jon|jon|joni|bangjoni
+! array namaku = namaku|namaqu|nama aku|nama aqu|nama gue|nama gua|nama gw|nama w|namaq|nama q|nmaku|nmaqu|nma aku|nma aqu|nma gue|nma gua|nma gw|nma w|nmaq|nma q|nama gwe|nma gwe|nama saya|nama sya|nama sy|nma saya|nma sya|nma sy|nm saya|nm sya|nm sy|aku|ak|aq|aqu|saya|sy|sya|gue|gua|gw|w|gwe
+! array udah = udah|udh|sudah|sdh|sdah
+! array belom = belom|blom|belum|blum|blm
+! array test = test|tes|tez|tess|testing
+! array emang = emang|emg|emng|memang|mmg|mmng|mmang|emangnya|emgnya|emngnya|memangnya|mmgnya|mmngnya|mmangnya|emangny|emgny|emngny|memangny|mmgny|mmngny|mmangny
+! array hadiah = hadiah|hadia|hdiah|hadiahnya|hadianya|hdiahnya|hadiahny|hadiany|hdiahny
+! array thanks = thanks|tks|makasih|makasij|makash|makasi|terima kasih|trm ksh|trimakasih|trima kasih|trima ksih|tq|thx|trims|tengs|thank|terimakasih|maaci
+! array ok = ok|okk|oke|okee|okeee|sip|sipp|sippp|siip|siiipp|siiippp
+! array pulsa = pulsa|plsa
+! array pesawat = pesawat|pswt|psawat|pswat|pesawt
+! array xtrans = xtrans|xtran|shuttle bus|shutle bus
+! array token = token|tken|tokn|tkn
+! array ingetin = ingetin|ingatin|ingatkan
+! array jemput = jemput|jmput|jempt|jmpt
+! array beli = pesen|beli|psn|bli|beliin|pesenin
+! array maaf = maaf|maap|muup|muuph|maf|sorry|sori|sory|mf|sry
+! array cari = cari|cariin|cri|criin|lihat|liat|lihatin|liatin|booking|bookingin|boking|bokingin|buking|bukingin|beli|bli|beliin|bliin|tanya|tanyain|tnyain|tnya|nyari|nyariin
+! array gakada = gak ada|gk ada|g ada|g ad|gada|ga ada|ga ad|gk ad|nggak ada|nggak ad|enggak ada|enggak ad|engga ada|engga ad|gak|nggak|ga|ngga|enggak
+
+! array halo = hi|halo|hai|hello|eh|hei|oi|hallo|helo|alo|hay|uy|haiii|hy|haloo|bang|abang|bang joni|bangjon|bang jon|jon|joni|bangjoni
+
+! array test = test|tes|tez|testes|testing
+
+! array thanks = thanks|tks|makasih|makasij|makash|makasi|terima kasih|trm ksh|trimakasih|trima kasih|trima ksih|tq|thx|trims|tengs|thank|terimakasih|maaci
+
+! array assalamualaikum = assalamualaikum|asalamualaikum|salamualaikum|samlekum|asalammualaikum
+
+! array salamkenal = slam kenal|slm kenal|lam kenal|salm kenal|salam knal|salam knl|salken|lam nal|sal ken|salam kenal|salamkenal
+
+! array ok = ok|okk|oke|okee|okeee|okay|okayy|oce|sip|sipp|sippp|siip|siiipp|siiippp
+
+! array cari = cari|cariin|cri|criin|lihat|liat|lihatin|liatin|booking|bookingin|boking|bokingin|buking|bukingin|beli|bli|beliin|bliin|tanya|tanyain|tnyain|tnya|nyari|nyariin
+
+! array pesawat = pesawat|psw|pswt|pesawar|psawat|pswat|pesawt
+
+! array tiket = tiket|tket|ticket|tiketnya|tketnya|ticketnya|tiketny|tketny|ticketny
+
+! array salah = salah|slah|slh|bukan|bkan|bkn
+
+! array betul = iya|iy|iye|ya|y|ho'oh|ho oh|he em|he'em|hem|hemm|hmm|hm|yoi|yo'i|yoyoi|benar|betul|bener|bner|bnr|bnar|yap|yup|iyup|iyap|sip|sipp|sippp|seepp|sep
+
+! array xtrans = xtrans|xtran|shuttle bus|shutle bus
+
+! array cuisine1 = aceh|american|amerika|amrik|arab|arabian|asia|asian|autralia|australi|ausie|aussie|bakery|roti|bakmi|mi|mie|bakso|baso|balinese|bali|bangka|batak|belanda|betawi|beverages|minuman|british|inggris|bubble tea|bubbletea|burger|cafe|kafe|caribbean|karibia|chinese|cina|china|coffee and tea|teh dan kopi|teh|kopi|continental|kontinental|deli|desserts|dessert|pencuci mulut|dimsum|dim sum|drinks only|european|eropa|finger food|cemilan|camilan|kudapan|snack|snacks|french|prancis|perancis|german|jerman|greek|yunani|grill|panggang|healthy food|makanan sehat|ice cream|es krim|eskrim|indian|india
+
+! array cuisine2 = indonesian|indo|indonesia|irish|irlandia|italian|italia|itali|japanese|japan|jepang|jawa|javanese|java|juices|juice|jus|kalimantan|kebab|korean|korea|lebanese|lebanon|lombok|makassar|malaysian|malaysia|melayu|manado|medan|mediterranean|mediterania|mexican|mexico|middle eastern|timur tengah|mongolian|mongolia|north indian|india utara|padang|padangnese|pakistani|pakistan|palembang|peranakan|pizza|piza|portuguese|portugese|portugis|ramen|satay|sate|seafood|sea food|makanan laut|hidangan laut|singaporean|singapore|singapur|singapura|spore|soto|south indian|india selatan
+
+! array cuisine3 = spanish|spanyol|steakhouse|steak house|steak|steik|street food|jajanan|streetfood|kaki lima|jajan|sulawesi|sumatera|sumatra|sunda|sundanese|sushi|taiwanese|taiwan|tex mex|texmex|mexico|meksiko|thai|thailand|turkish|turki|vietnamese|vietnam|western|barat|yogyakarta|yogya|jogja|jogjakarta
+
+! array location1 = ancol|angke|muara angke|bantar gebang|bantargebang|beji|bekasi barat|bekasi selatan|bekasi timur|bekasi utara|benda|bendungan hilir|benhil|bintaro|blok m|bogor barat|bogor selatan|bogor tengah|bogor timur|bogor utara|bojongsari|bojong sari|cakung|cawang|cempaka putih|cengkareng|cibodas|cibubur|cijantung|cikini|cilandak|ciledug|cililitan|cilincing|cilodong|cimanggis|cinere|cipayung|cipinang|cipondoh|ciputat|ciputat timur|daan mogot|dharmawangsa|darmawangsa|duren sawit|fatmawati|gajah mada|gajahmada|gambir|gandaria|gatot subroto|gatsu|green garden|green ville|greenville|grogol|gunung sahari|hayam wuruk|jagakarsa
+
+! array location2 = jatiasih|jati asih|jatinegara|jatisampurna|jelambar|kalibata|xbata|kalideres|xderes|kalimalang|xmalang|kampung melayu|karang tengah|karawaci|karet|kebayoran lama|kebon jeruk|kecamatan tangerang|tangerang|tanggerang|kedoya|kelapa gading|gading|kemang|kemanggisan|kemayoran|kembangan|klender|koja|kota|kramat jati|kuningan|larangan|lebak bulus|limo|makasar|mampang prapatan|mampang|mangga besar|mangga dua|manggarai|matraman|medan satria|melawai|menteng|meruya|muara karang|mustikajaya|mustika jaya|neglasari|pademangan|palmerah|pamulang|pancoran|pancoran mas|pantai indah kapuk|pik|pasar baru|pasar minggu|pecenongan
+
+! array location3 = penjaringan|periuk|priuk|pesanggrahan|pesanggerahan|pinang|pinang ranti|pinangranti|pluit|pondok aren|pondok bambu|pondok gede|pondok indah|pondok melati|pulo gadung|pulogadung|puri indah|puri|rawalumbu|rawa lumbu|rawamangun|roxy|scbd|sawah besar|sawangan|senayan|senen|senopati|serpong|serpong utara|setiabudi|stiabudi|setu|slipi|sudirman|sukmajaya|sunter|taman mini|taman sari|tamansari|tambora|tanah abang|tana abang|tenabang|tanah sareal|tanjung duren|tanjung priok|priok|tapos|tebet|thamrin|tomang
+
+! array toljasamarga1 = cililitan|taman mini|dukuh|pasar rebo|cibubur|cibubur utama|cisalak|cimanggis utama|cimanggis|gunung putri|jagorawi|cawang|tebet|kuningan|semanggi|senayan|pejompongan|slipi|tanjung duren|tomangjelambar|angke|dalam kota|dalkot|halim|pondok gede barat|pondok gede timur|cikunir|bekasi barat|bekasi timur|tambun|cibitung|cikarang utama|cikarang barat|cibatu|cikarang timur|karawang barat|karawang timur|dawuan|kalihurip|cikampek|cikopo|kebon jeruk|meruya|meruya utara|kembangan selatan|karang tengah|karang tengah barat
+
+! array toljasamarga2 = kunciran|tangerang|karawaci|bitung|joglo|cileduk|dawuan|sadang|jatiluhur|cikamuning|padalarang barat|padalarang|pasteur|pasir koja|kopo|mohammad toha|buah batu|gedebage|cileunyi|baros|purbaleunyi|purbalenyi|cipularang|bandung|veteran|ciputat|pondok pinang|fatmawati|ampera|lenteng agung|gedong|kampung rambutan|bambu apus|setu|jatiwarna|jatiasih|kalimalang|bintara|cakung barat|cakung timur|rorotan|cilincing|jorr|lingkar luar|palimanan|plumbon|ciperna|kanci|cipali|cikapali|serpong|bsd|bintaro|ulujami
+
+! array bosen = bosen|bosan|bt|bete
+
+! array nggak = nggak|gak|enggak|engga|gk|tidak|tdk|ngga|gamau|nggamau|gausah|kepo|mau tau|mw tau|mo tau|motau|mo taw|nggak mau|gak mau|ga mau|gk mau|gamao|rahasia
+
+! array hurufb = huruf B|huruf bnya|huruf b-nya
+
+! array gaujan = nggak ujan|nggak hujan|ngga ujan|ngga hujan|enggak ujan|enggak hujan|engga ujan|engga hujan|gak ujan|gak hujan|ga ujan|ga hujan|gaujan
+
+! array nyerah = nyerah|nggak tau|gatau|enggak tau|gak tau|engga tau|ngga tau
+
+! array roda = roda|rodanya|ban|bannya|banya|rodany|banny|bany
+
+! array begadang = begadang|bergadang|bgadang|brgadang
+
+! array ujan = ujan|hujan
+
+! array wk = wk|wkwk|wkwkwk|wkwkwkwk|wkwkwkwkwk
+
+! array hahaha = haha|hahaa|hahaha|hahahaa|hahahaha|hahahahaa|hha
+
+! array lagi = lagi|lgi|lg
+
+! array namaku = namaku|namaqu|nama aku|nama aqu|nama gue|nama gua|nama gw|nama w|namaq|nama q|nmaku|nmaqu|nma aku|nma aqu|nma gue|nma gua|nma gw|nma w|nmaq|nma q|nama gwe|nma gwe|nama saya|nama sya|nama sy|nma saya|nma sya|nma sy|nm saya|nm sya|nm sy|aku|ak|aq|aqu|saya|sy|sya|gue|gua|gw|w|gwe
+
+! array buatapa = buat apa|ngapain|wat apa|buat ap|apa|ngpain|buat apaan
+
+! array date = 1|01|2|02|3|03|4|04|5|05|6|06|7|07|8|08|9|09|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31
+
+! array months = 01|1|02|2|03|3|04|4|05|5|06|6|07|7|08|8|09|9|10|11|12|jan|feb|mar|apr|mei|jun|jul|aug|sept|okt|nov|des|januari|februari|maret|april|mei|juni|juli|agustus|september|oktober|november|desember|january|february|pebruari|march|april|may|june|july|august|aug|october|oct|nopember|december|dec
+
+! array years = 1950|50|1951|51|1952|52|1953|53|1954|54|1955|55|1956|56|1957|57|1958|58|1959|59|1960|60|1961|61|1962|62|1963|63|1964|64|1965|65|1967|67|1968|68|1969|69|1970|70|1971|71|1972|72|1973|73|1974|74|1975|75|1976|76|1977|77|1978|78|1979|79|1980|80|1981|81|1982|82|1983|83|1984|84|1985|85|1986|86|1987|87|1988|88|1989|89|1990|90|1991|91|1992|92|1993|93|1994|94|1995|95|1996|96|1997|97|1998|98|1999|99|2000|00|2001|01|2002|02|2003|03|2004|04|2005|05|2006|06|2007|07|2008|08|2009|09|2010|10|2011|11|2012|12|2013|13|2014|14|2015|15|2016|16|2017|17|2018|18
+
+! array uber = uber|jemput|jmput|jmpt
+
+! array token = token|pln|tken|listrik|pulsa listrik|pulsa pln
+
+! array zomato = zomato|resto|restoran|laper|lapar
+
+! array cuaca = cuaca|cuacanya|cuacany
+
+! array jalantol = jalan tol|jalantol|jln tol
+
+! array ingetin = ingetin|ingatin|reminder
+
+! array terjemahin = terjemahin|artiin|terjemahkan|translator
+
+! array cowok = cowok|cowo|cwo|cwok|co|laki|lakik|lakilaki|pria|men|man
+
+! array cewek = cewek|cewe|cwe|cwek|ce|cw|perempuan|prempuan|wanita|ladies|lady|women|woman
+
+! array emailku = emailku|emailqu|email aku|email aqu|email gue|email gua|email gw|email w|emailq|email q
+
+! array suka = suka|ska|iya|iy|iye|ya|y|ho'oh|ho oh|he em|he'em|hem|hemm|hmm|hm|yoi|yo'i|yoyoi|benar|betul|bener|bner|bnr|bnar|yap|yup|iyup|iyap
+
+! array mail = gmail|com|id|co|ymail|yahoo|rocketmail|hotmail|mail
+
+
+! array city1 = ambon|bajawa|balikpapan|bpp|banda aceh|aceh|bandung|bdg|banjarmasin|banyuwangi|batam|baubau|bengkulu|berau|biak|bima|buli|buol|denpasar|dps|bali|ende|fakfak|gorontalo|gunungsitoli|jakarta|cengkareng|jkt|halim perdanakusuma|halim|halimperdanakusuma|jambi|jayapura|kaimana|kendari|kotabaru|kupang|labuanbajo|labuha|lampung|lhokseumawe|lombok|mataram|luwuk|malang|mamuju|manado|manokwari|maumere|medan|mdn|kuala namu|kualanamu|melanguane|merauke|meulaboh|nabire|natunaranai|padang|palangka raya|palangkaraya|palembang|palu|pangkal pinang|pangkalpinang|pangkalan bun|pangkalanbun|pekanbaru|pomalaa|pontianak|poso|pulau alor|pulaualor|ruteng|sampit|semarang
+! array city2 = sibolga|silangit|sinabang|solo|sorong|sumbawa|surabaya|sby|sub|tahuna|tambolaka|tanjung pandan|tanjungpandan|tanjung pinang|tanjungpinang|tarakan|ternate|timika|tobelo|tual|makassar|mks|ujungpandang|waingapu|wakatobi|wangi wangi|wangiwangi|yogyakarta|yogya|jogya|jogja|jgj|adelaide|alice springs|alicesprings|brisbane|cairns|coffs harbour|coffsharbour|darwin|gold coast|goldcoast|hobart|mackay whitsundays|mackay|melbourne|perth|sunshine coast|sunshinecoast|sydney|chittagong|delhi|dhaka|brunei|phnom penh|phnompenh|siem reap|siemreap|beijing|chengdu|chongqing|guangzhou|guilin|haikou|hangzhou|kunming|nanning|ningbo|qingdao|shanghai|shenyang|shenzhen|tianjin
+! array city3 = wuhan|xian|colombo|hong kong|hongkong|ahmedabad|bangalore|chennai|hyderabad|kochi|kolkata|mumbai|thiruvananthapuram|tiruchirapalli trichy|fukuoka|nagoya|okinawa - naha|okinawa|osaka - kansai|osaka|sapporo - shin-chitose|sapporo|tokyo - haneda|haneda|tokyohaneda|tokyo - narita|narita|tokyonarita|tokyo|vientiane|macau|alor setar|alorsetar|bintulu|johor baru|johorbaru|kota bharu|kotabharu|kota kinabalu|kotakinabalu|kinabalu|kuala lumpur|kualalumpur|malaysia|kuala terengganu|kualaterengganu|kuching|langkawi|malacca|miri|penang|sandaka|sibu|subang|tawau|mandalay|yangoon|kathmandu|bacolod|cebu|clark manila|clark|davao|iloilo|manila naia|manila
+! array city4 = puerto princesa|puertoprincesa|tacloban|jeddah|singapore|singapor|singapura|singgapur|sing|busan|seoul|taipei|bangkok|thailand|don mueang|donmueang|chiang mai|chiangmai|chiang rai|chiangrai|hat yai|hatyai|krabi|nakhon phanom|nakhonphanom|nakhon si thammarat|nakhonsithammarat|narathiwat|phuket|surat thani|suratthani|trang|ubon ratchathani|ubonratchathani|udon thani|udonthani|dili|abu dhabi|abudhabi|da nang|danang|hanoi|london gatwick|london|ho chi minh city|hochiminh
+! array city5 = aekloba|alastuwa|ambarawa|angke|argopuro|arjasa|arjawinangun|awipari|babadan|babakan|babat|bagor|bajalinggei|bamban|bandar kalipah|bandar tinggi|bandung|bangil|bangoduwa|bangsalsari|banjar|banjarsari|banyuwangi baru|barat|baron|batang|batang kuis|batu tulis|baturaja|bekasi|bekri|benowo|binjai|blambanganpagar|blambanganumpu|blimbing|blimbing pendopo|blitar|bogor|boharan|bojonegoro|bojong|bowerno|brambanan|brebes|brumbung|bulakamba|bumiayu|bungamas|candimas|caruban|catang|cepu|cerme|ciamis|cianjur|ciawi|cibadak|cibatu|cibeber|cibungur|cicalengka|cicayur|cicurug|ciganea|cigombong|cikadongdong|cikampek|cikarang|cikeusal|cikudapateuh|cilacap
+! array city6 = cilaku|cilame|ciledug|cilegeh|cilegon|cilejit|cimahi|cimekar|cimindi|cipari|cipeundeuy|cipunegara|cirebon|cirebon prujakan|cireungas|ciroyom|cisaat|cisauk|cisomang|citeras|comal|curahmalang|daru|dawuan|denpasar|dolokmerangir|doplang|duduk|duku|duri|gadobangkong|gambir|gandasolih|gandrungmangun|garahan|garum|gedangan|gedebage|gembong|geneng|giham|glenmore|gombong|grati|gubug|gumilir|gundih|gunungmegang|hajipemanggilan|haurgeulis|haurpugur|hengelo|ijo|indralaya|indralaya|jakarta kota|jambon|jambu baru|jatibarang|jatinegara|jatiroto|jember|jenar|jeruklegi|jombang|kalibalangan|kalibaru|kalibodri|kalisat|kalisetail|kalitidu|kaliwungu
+! array city7 = kampung bandan|kandangan|kapas|karang sari|karang tengah|karangantu|karanganyar|karangasem|karangjati|karangsari|karangsuwung|karawang|kawunganten|kebasen|kebayoran|kebonromo|kebumen|kedinding|kediri|kedokangabus|kedungbanteng|kedunggalar|kedunggedeh|kedungjati|kemayoran|kemiri|kemranjen|kepanjen|kertapati|kertasemaya|kertosono|kesamben|ketanggungan|ketanggungan barat|ketapang|kiaracondong|kisaran|klakah|klari|klaten|kosambi|kotabumi|kotapadang|kotok|kradenan|kras|krenceng|krengseng|kretek|krian|kroya|kuraitaji|kutoarjo|kutowinangun|labuanratu|lahat|lamongan|lampegan|langen|larangan|larangan|lawang|lebakjero|lebeng|leces|ledokombo|leles
+! array city8 = lemahabang|lempuyangan|leuwi goong|lidah tanah|limapuluh|linggapura|losari|lubuk alung|lubuk linggau|lubukpakam|lubukrukam|luwung|madiun|maguwo|maja|malang|malang kota lama|malasan|manggarai|mangkang|manonjaya|maos|marbau|martapura|masaran|maseng|maswati|medan|meluwung|membang muda|merak|minggiran|mojokerto|mrawan|muara enim|muarasaling|nagreg|negararatu|negeriagung|ngadiluwih|nganjuk|ngebruk|ngrombro|ngunut|notog|padalarang|padang|padanghalaban|pagergunung|pakishaji|paledang|palmerah|pamingke|paninjawan|panunggalan|papar|pariaman|paron|parung kuda|parung panjang|pasar senen|pasuruan|patuguran|pauhkambar|pegadenbaru|pekalongan|pemalang
+! array city9 = perbaungan|perlanaan|petarukan|peterongan|plabuan|plered|pohgajih|pondok ranji|porong|prabumulih|prembun|probolinggo|prupuk|pucuk|puluraja|purwakarta|purwoasri|purwokerto|purwosari|rajapolah|rambipuji|rampah|rancaekek|randegan|randegan|randuagung|randublatung|rangkasbitung|rantau prapat|rejosari|rejotangan|rendeh|rengas|rogojampi|sadang|salem|saradan|sasaksaat|saungnaga|sedadi|seibejangkar|semarang poncol|semarang tawang|sembung|sempolan|sentolo|sepanjang|serang|serpong|siantar|sidareja|sidoarjo|sikampuh|sindanglaut|singojuruh|singosari|slawi|solobalapan|solojebres|songgom|sragen|sragi|srowot|sruweng|sudimara|sukabumi|sukatani|sukomoro
+! array city10 = sukorejo|sulusuban|sumbergempol|sumberlawang|sumberpucung|sumberrejo|sumberwadung|sumlaran|sumobito|sumpiuh|surabaya gubeng|surabaya kota|surabaya pasar turi|surodadi|susuhan|tabing|talun|tambak|tambun|tanah abang|tandes|tangerang|tanggul|tanggulangin|tanjung|tanjung priuk|tanjungbalai|tanjungkarang|tanjungrasa|tarik|tasikmalaya|tebing tinggi|tebing tinggi|tegal|tegineneng|telawa|temuguruh|tenjo|terisi|testes|tigaraksa|tigaraksa|tonjong baru|tugu yogyakarta|tulangan|tulungagung|tulungbuyut|ujanmas|ujungnegoro|wadu|walantaka|walikukun|waru|waruduwur|warung bandrek|wates|waytuba|weleri|wilangan|wlingi|wonokerto|wonokromo|wonokromox|wonosari
+! array city11 = bale xtrans|bsm|btp|de batara|green batara|mtc|oncom raos|pasteur|pt inti|bekasi|bandara soeta(cgk)|bintaro|blok m|bsd|cibubur|jatiwaringin|karawaci|kelapa gading|pancoran|pondok indah|semanggi|tomang|batang|pekalongan|laweyan|pabelan|solo|jatingaleh|kendal|semarang|tembalang|jogja|jombor|blora|bumi serpong damai|bandung super mall|bandung timur plaza|metro indah mall
+! array months = jan|feb|mar|apr|mei|jun|jul|aug|sept|okt|nov|des|januari|februari|maret|april|mei|juni|juli|agustus|september|oktober|november|desember
+! array years = 2015|2016|2017
+! array maskapai = garuda|citilink|lion|lion air|airasia|air asia|batik|sriwijaya|sitilink|batik air|batikair|lionair|garuda indonesia|sriwijaya air
+! array cititrans = bandung|bdg|jakarta|jkt|dipati ukur|pasteur|ciwalk|tsm|kelapa gading|central park|fatmawati|kuningan|semanggi|bintaro|soetta|soeta|bandara sukarno hatta|sukarno hatta
+! array cuisine1 = aceh|american|amerika|amrik|arab|arabian|asia|asian|autralia|australi|ausie|aussie|bakery|roti|bakmi|mi|mie|bakso|baso|balinese|bali|bangka|batak|belanda|betawi|beverages|minuman|british|inggris|bubble tea|bubbletea|burger|cafe|kafe|caribbean|karibia|chinese|cina|china|coffee and tea|teh dan kopi|teh|kopi|continental|kontinental|deli|desserts|dessert|pencuci mulut|dimsum|dim sum|drinks only|european|eropa|finger food|cemilan|camilan|kudapan|snack|snacks|french|prancis|perancis|german|jerman|greek|yunani|grill|panggang|healthy food|makanan sehat|ice cream|es krim|eskrim|indian|india
+! array cuisine2 = indonesian|indo|indonesia|irish|irlandia|italian|italia|itali|japanese|japan|jepang|jawa|javanese|java|juices|juice|jus|kalimantan|kebab|korean|korea|lebanese|lebanon|lombok|makassar|malaysian|malaysia|melayu|manado|medan|mediterranean|mediterania|mexican|mexico|middle eastern|timur tengah|mongolian|mongolia|north indian|india utara|padang|padangnese|pakistani|pakistan|palembang|peranakan|pizza|piza|portuguese|portugese|portugis|ramen|satay|sate|seafood|sea food|makanan laut|hidangan laut|singaporean|singapore|singapur|singapura|spore|soto|south indian|india selatan
+! array cuisine3 = spanish|spanyol|steakhouse|steak house|steak|steik|street food|jajanan|streetfood|kaki lima|jajan|sulawesi|sumatera|sumatra|sunda|sundanese|sushi|taiwanese|taiwan|tex mex|texmex|mexico|meksiko|thai|thailand|turkish|turki|vietnamese|vietnam|western|barat|yogyakarta|yogya|jogja|jogjakarta
+! array location1 = ancol|angke|muara angke|bantar gebang|bantargebang|beji|bekasi barat|bekasi selatan|bekasi timur|bekasi utara|benda|bendungan hilir|benhil|bintaro|blok m|bogor barat|bogor selatan|bogor tengah|bogor timur|bogor utara|bojongsari|bojong sari|cakung|cawang|cempaka putih|cengkareng|cibodas|cibubur|cijantung|cikini|cilandak|ciledug|cililitan|cilincing|cilodong|cimanggis|cinere|cipayung|cipinang|cipondoh|ciputat|ciputat timur|daan mogot|dharmawangsa|darmawangsa|duren sawit|fatmawati|gajah mada|gajahmada|gambir|gandaria|gatot subroto|gatsu|green garden|green ville|greenville|grogol|gunung sahari|hayam wuruk|jagakarsa
+! array location2 = jatiasih|jati asih|jatinegara|jatisampurna|jelambar|kalibata|xbata|kalideres|xderes|kalimalang|xmalang|kampung melayu|karang tengah|karawaci|karet|kebayoran lama|kebon jeruk|kecamatan tangerang|tangerang|tanggerang|kedoya|kelapa gading|gading|kemang|kemanggisan|kemayoran|kembangan|klender|koja|kota|kramat jati|kuningan|larangan|lebak bulus|limo|makasar|mampang prapatan|mampang|mangga besar|mangga dua|manggarai|matraman|medan satria|melawai|menteng|meruya|muara karang|mustikajaya|mustika jaya|neglasari|pademangan|palmerah|pamulang|pancoran|pancoran mas|pantai indah kapuk|pik|pasar baru|pasar minggu|pecenongan
+! array location3 = penjaringan|periuk|priuk|pesanggrahan|pesanggerahan|pinang|pinang ranti|pinangranti|pluit|pondok aren|pondok bambu|pondok gede|pondok indah|pondok melati|pulo gadung|pulogadung|puri indah|puri|rawalumbu|rawa lumbu|rawamangun|roxy|scbd|sawah besar|sawangan|senayan|senen|senopati|serpong|serpong utara|setiabudi|stiabudi|setu|slipi|sudirman|sukmajaya|sunter|taman mini|taman sari|tamansari|tambora|tanah abang|tana abang|tenabang|tanah sareal|tanjung duren|tanjung priok|priok|tapos|tebet|thamrin|tomang
+! array toljasamarga1 = cililitan|taman mini|dukuh|pasar rebo|cibubur|cibubur utama|cisalak|cimanggis utama|cimanggis|gunung putri|jagorawi|cawang|tebet|kuningan|semanggi|senayan|pejompongan|slipi|tanjung duren|tomangjelambar|angke|dalam kota|dalkot|halim|pondok gede barat|pondok gede timur|cikunir|bekasi barat|bekasi timur|tambun|cibitung|cikarang utama|cikarang barat|cibatu|cikarang timur|karawang barat|karawang timur|dawuan|kalihurip|cikampek|cikopo|kebon jeruk|meruya|meruya utara|kembangan selatan|karang tengah|karang tengah barat
+! array toljasamarga2 = kunciran|tangerang|karawaci|bitung|joglo|cileduk|dawuan|sadang|jatiluhur|cikamuning|padalarang barat|padalarang|pasteur|pasir koja|kopo|mohammad toha|buah batu|gedebage|cileunyi|baros|purbaleunyi|purbalenyi|cipularang|bandung|veteran|ciputat|pondok pinang|fatmawati|ampera|lenteng agung|gedong|kampung rambutan|bambu apus|setu|jatiwarna|jatiasih|kalimalang|bintara|cakung barat|cakung timur|rorotan|cilincing|jorr|lingkar luar|palimanan|plumbon|ciperna|kanci|cipali|cikapali|serpong|bsd|bintaro|ulujami
+! array kotashol = madiun|jakarta
+! array kotasholat1 = ambarawa|ambon|amlapura|amuntai|argamakmur|atambua|babo|bagan siapiapi|bahaur kalteng|bajawa|balige|balikpapan|banda aceh|bandar|bandung|bangkalan|bangkinang|bangko|bangli|banjar|banjarbaru|banjarmasin|banjarnegara|bantaeng|banten|bantul|banyuwangi|barabai|barito|barru|batam|batang|batu|baturaja|batusangkar|baubau|bekasi|bengkalis|bengkulu|benteng|biak|bima|binjai|bireuen|bitung|blitar|blora|bogor|bojonegoro|bondowoso|bontang|boyolali|brebes|bukittinggi|bula sbt|bulukumba|buntok|cepu|ciamis|cianjur|cibinong|cilacap|cilegon|cimahi|cirebon|curup|demak|denpasar|depok|dili|dompu|donggala|dumai|ende|enggano|enrekang
+! array kotasholat2 = fakfak|garut|gianyar|gombong|gorontalo|gresik|gunung sitoli|indramayu|jakarta|jkt|jakarta barat|jakarta pusat|jakarta selatan|jakarta timur|jakarta utara|jambi|jayapura|jember|jeneponto|jepara|jombang|kabanjahe|kalabahi|kalianda|kandangan|karanganyar|karawang|kasungan|kayuagung|kebumen|kediri|kefamenanu|kendal|kendari|kertosono|ketapang|kisaran|klaten|kolaka|kota baru pulau laut|kotabumi|kota jantho|kotamobagu|kuala kapuas|kuala kurun|kuala pembuang|kuala tungkal|kudus|kuningan|kupang|kutacane|kutoarjo|labuhan|lahat|lamongan|langsa|larantuka|lawang|lhoseumawe|limboto|lubuk basung|lubuk linggau|lubuk pakam|lubuk sikaping|lumajang|luwuk
+! array kotasholat3 = madiun|magelang|magetan|majalengka|majene|makale|makassar|malang|mamuju|manna|manokwari|marabahan|maros|martapura|masamba|masohi|mataram|maumere|medan|mempawah|menado|mentok|merauke|metro|meulaboh|mojokerto|muara bulian|muara bungo|muara enim|muara teweh|muaro sijunjung|muntilan|nabire|negara|nganjuk|ngawi|nunukan|pacitan|padang|padang panjang|padang sidempuan|pagaralam|painan|palangkaraya|palembang|palopo|palu|pamekasan|pandeglang|pangka|pangkajene sidenreng|pangkalan bun|pangkalpinang|panyabungan|par|parepare|pariaman|pasuruan|pati|payakumbuh|pekalongan|pekan baru|pemalang|pematangsiantar|pendopo|pinrang|pleihari
+! array kotasholat4 = polewali|pondok gede|ponorogo|pontianak|poso|prabumulih|praya|probolinggo|purbalingga|purukcahu|purwakarta|purwodadigrobogan|purwokerto|purworejo|putussibau|raha|rangkasbitung|rantau|rantauprapat|rantepao|rembang|rengat|ruteng|sabang|salatiga|samarinda|sambas|sampang|sampit|sanggau|sawahlunto|sekayu|selong|semarang|sengkang|serang|serui|sibolga|sidikalang|sidoarjo|sigli|singaparna|singaraja|singkawang|sinjai|sintang|situbondo|slawi|sleman|soasiu|soe|solo|solok|soreang|sorong|sragen|stabat|subang|sukabumi|sukoharjo|sumbawa besar|sumedang|sumenep|sungai liat|sungai penuh|sungguminasa|surabaya|surakarta|tabanan|tahuna
+! array kotasholat5 = takalar|takengon|tamiang layang|tanah grogot|tangerang|tanjung balai|tanjung enim|tanjung pandan|tanjung pinang|tanjung redep|tanjung selor|tapak tuan|tarakan|tarutung|tasikmalaya|tebing tinggi|tegal|temanggung|tembilahan|tenggarong|ternate|tolitoli|tondano|trenggalek|tual|tuban|tulungagung|ujung berung|ungaran|waikabubak|waingapu|wamena|watampone|watansoppeng|wates|wonogiri|wonosari|wonosobo|yogyakarta
+! array digit = 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31
+! array person = orang|dewasa|org
+! array child = anak|ank
+! array infant = bayi
+! array order = booking|pilih|book|no|nomor|order
+! array eurosoccer = albania|austria|belgium|croatia|czech|england|france|germany|hungary|iceland|ireland|italy|poland|portugal|romania|russia|slovakia|spain|sweden|switzerland|turkey|ukraine|wales
+! var mycontext = random
+! array monthnum = 01|02|03|04|05|06|07|08|09|10|11|12
+! array daynum = 01|02|03|04|05|06|07|08|09|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31
+
+! array halo = hi|halo|hai|hello|eh|hei|oi|hallo|helo|alo|hay|uy|haiii|hy|haloo|bang|abang|bang joni|bangjon|bang jon|jon|joni|bangjoni|hola
+! array assalamualaikum = assalamualaikum|asalamualaikum|salamualaikum|samlekum|asalammualaikum
+! array salamkenal = slam kenal|slm kenal|lam kenal|salm kenal|salam knal|salam knl|salken|lam nal|sal ken|salam kenal|salamkenal
+! array pesawat = pesawat|psw|pswt|pesawar|psawat|pswat|pesawt
+! array city1 = ambon|bajawa|balikpapan|bpp|banda aceh|aceh|bandung|bdg|banjarmasin|banyuwangi|batam|baubau|bengkulu|berau|biak|bima|buli|buol|denpasar|dps|bali|ende|fakfak|gorontalo|gunungsitoli|jakarta|cengkareng|jkt|halim perdanakusuma|halim|halimperdanakusuma|jambi|jayapura|kaimana|kendari|kotabaru|kupang|labuanbajo|labuha|lampung|lhokseumawe|lombok|mataram|luwuk|malang|mamuju|manado|manokwari|maumere|medan|mdn|kuala namu|kualanamu|melanguane|merauke|meulaboh|nabire|natunaranai|padang|palangka raya|palangkaraya|palembang|palu|pangkal pinang|pangkalpinang|pangkalan bun|pangkalanbun|pekanbaru|pomalaa|pontianak|poso|pulau alor|pulaualor|ruteng|sampit|semarang
+! array city2 = sibolga|silangit|sinabang|solo|sorong|sumbawa|surabaya|sby|sub|tahuna|tambolaka|tanjung pandan|tanjungpandan|tanjung pinang|tanjungpinang|tarakan|ternate|timika|tobelo|tual|makassar|mks|ujungpandang|waingapu|wakatobi|wangi wangi|wangiwangi|yogyakarta|yogya|jogya|jogja|jgj|adelaide|alice springs|alicesprings|brisbane|cairns|coffs harbour|coffsharbour|darwin|gold coast|goldcoast|hobart|mackay whitsundays|mackay|melbourne|perth|sunshine coast|sunshinecoast|sydney|chittagong|delhi|dhaka|brunei|phnom penh|phnompenh|siem reap|siemreap|beijing|chengdu|chongqing|guangzhou|guilin|haikou|hangzhou|kunming|nanning|ningbo|qingdao|shanghai|shenyang|shenzhen|tianjin
+! array city3 = wuhan|xian|colombo|hong kong|hongkong|ahmedabad|bangalore|chennai|hyderabad|kochi|kolkata|mumbai|thiruvananthapuram|tiruchirapalli trichy|fukuoka|nagoya|okinawa - naha|okinawa|osaka - kansai|osaka|sapporo - shin-chitose|sapporo|tokyo - haneda|haneda|tokyohaneda|tokyo - narita|narita|tokyonarita|tokyo|vientiane|macau|alor setar|alorsetar|bintulu|johor baru|johorbaru|kota bharu|kotabharu|kota kinabalu|kotakinabalu|kinabalu|kuala lumpur|kualalumpur|malaysia|kuala terengganu|kualaterengganu|kuching|langkawi|malacca|miri|penang|sandaka|sibu|subang|tawau|mandalay|yangoon|kathmandu|bacolod|cebu|clark manila|clark|davao|iloilo|manila naia|manila
+! array city4 = puerto princesa|puertoprincesa|tacloban|jeddah|singapore|singapor|singapura|singgapur|sing|busan|seoul|taipei|bangkok|thailand|don mueang|donmueang|chiang mai|chiangmai|chiang rai|chiangrai|hat yai|hatyai|krabi|nakhon phanom|nakhonphanom|nakhon si thammarat|nakhonsithammarat|narathiwat|phuket|surat thani|suratthani|trang|ubon ratchathani|ubonratchathani|udon thani|udonthani|dili|abu dhabi|abudhabi|da nang|danang|hanoi|london gatwick|london|ho chi minh city|hochiminh
+! array months = jan|feb|mar|apr|mei|jun|jul|aug|sept|okt|nov|des|januari|februari|maret|april|mei|juni|juli|agustus|september|oktober|november|desember|january|february|pebruari|march|april|may|june|july|august|aug|october|oct|nopember|december|dec
+! array bulan = 01|1|02|2|03|3|04|4|05|5|06|6|07|7|08|8|09|9|10|11|12
+! array years = 17|18|2017|2018
+! array hariini = hari ini|hr ini|hri ini|hariini
+! array besok = besok|bsok|bsk
+! array pp = pp|pulang pergi|pulangpergi|plg pergi|plg prgi|pulang prgi
+! array oneway = sekali jalan|1x jalan|skali jalan|skli jalan|sekali jlan|sekali jln|sekali jaln|1x jln|1x jlan|1x jaln|1 x jln|1 x jlan|1 x jaln|1 x jalan|one way|oneway
+! array bangjoni = bang joni|abang|bang|bang jon|bangjon|jon|joni|bro|sob|bos|bangjoni|bang
+! array test = test|tes|tez|tess|testing
+! array salam kenal = slam kenal|slm kenal|lam kenal|salm kenal|salam knal|salam knl|salken|lam nal|sal ken|salam kenal|salamkenal
+! array bosen = bosen|bosan|bt|bete
+! array nggak = nggak|gak|enggak|engga|gk|tidak|tdk|ngga|gamau|nggamau|g
+! array mau = mau|ok|ya|boleh|iya
+! array hurufb = huruf B|huruf bnya|huruf b-nya
+! array gaujan = nggak ujan|nggak hujan|ngga ujan|ngga hujan|enggak ujan|enggak hujan|engga ujan|engga hujan|gak ujan|gak hujan|ga ujan|ga hujan|gaujan
+! array nyerah = nyerah|nggak tau|gatau|enggak tau|gak tau|engga tau|ngga tau
+! array lagiapa = lagi apa|lagiapa|lg apa|lgi apa|lagi ngapain|lgi ngapain|lg ngapain|gi apa
+
+! array makian = tai|babi|monyet|titit|memek|anjing|ngentot|kupret|kambing|peler|pler|kontol|goblok|goblog|suek|jing|njing|tolol|fak|fuck|kambing|tete|tetek|toket|bacot|cot|tot|jancuk|asu|bodo|bodok|kodok|kampret|njing|jing
+
+! array pesawat = pesawat|pswt|psawat|pswat|psawt
+! array cuaca = cuaca|suhu|hujan|panas|suhunya|cuacanya|cuacabj|hari ini bakal ujan gak ya bang|hari ini ujan gak bang|hari ini ujan gak ya|hari ini bakal ujan gak ya| hari ini ujan gak|hari ini bakal ujan nggak ya bang|hari ini ujan nggak bang| hari ini ujan nggak ya|hari ini bakal ujan nggak ya|hari ini ujan nggak|hari ini bakal ujan ngga ya bang|hari ini ujan ngga bang|hari ini ujan ngga ya|hari ini bakal ujan ngga ya|hari ini ujan ngga|hari ini bakal ujan ga ya bang|hari ini ujan ga bang|hari ini ujan ga ya|hari ini bakal ujan ga ya|hari ini ujan ga
+! array halo = hi|halo|hai|hello|eh|hei|oi|hallo|helo|alo|hay|uy|haiii|hy|haloo|bang|abang|bang joni|bangjon|bang jon|jon|joni|bangjoni
+! array namaku = namaku|namaqu|nama aku|nama aqu|nama gue|nama gua|nama gw|nama w|namaq|nama q|nmaku|nmaqu|nma aku|nma aqu|nma gue|nma gua|nma gw|nma w|nmaq|nma q|nama gwe|nma gwe|nama saya|nama sya|nama sy|nma saya|nma sya|nma sy|nm saya|nm sya|nm sy|aku|ak|aq|aqu|saya|sy|sya|gue|gua|gw|w|gwe
+! array udah = udah|udh|sudah|sdh|sdah
+! array belom = belom|blom|belum|blum|blm
+! array test = test|tes|tez|tess|testing
+! array emang = emang|emg|emng|memang|mmg|mmng|mmang|emangnya|emgnya|emngnya|memangnya|mmgnya|mmngnya|mmangnya|emangny|emgny|emngny|memangny|mmgny|mmngny|mmangny
+! array hadiah = hadiah|hadia|hdiah|hadiahnya|hadianya|hdiahnya|hadiahny|hadiany|hdiahny
+! array thanks = thanks|tks|makasih|makasij|makash|makasi|terima kasih|trm ksh|trimakasih|trima kasih|trima ksih|tq|thx|trims|tengs|thank|terimakasih|maaci
+! array ok = ok|okk|oke|okee|okeee|sip|sipp|sippp|siip|siiipp|siiippp
+! array pulsa = pulsa|plsa
+! array pesawat = pesawat|pswt|psawat|pswat|pesawt
+! array xtrans = xtrans|xtran|shuttle bus|shutle bus
+! array token = token|tken|tokn|tkn
+! array ingetin = ingetin|ingatin|ingatkan
+! array jemput = jemput|jmput|jempt|jmpt
+! array beli = pesen|beli|psn|bli|beliin|pesenin
+! array maaf = maaf|maap|muup|muuph|maf|sorry|sori|sory|mf|sry
+! array cari = cari|cariin|cri|criin|lihat|liat|lihatin|liatin|booking|bookingin|boking|bokingin|buking|bukingin|beli|bli|beliin|bliin|tanya|tanyain|tnyain|tnya|nyari|nyariin
+! array gakada = gak ada|gk ada|g ada|g ad|gada|ga ada|ga ad|gk ad|nggak ada|nggak ad|enggak ada|enggak ad|engga ada|engga ad
+
+! array halo = hi|halo|hai|hello|eh|hei|oi|hallo|helo|alo|hay|uy|haiii|hy|haloo|bang|abang|bang joni|bangjon|bang jon|jon|joni|bangjoni
+
+! array test = test|tes|tez|testes|testing
+
+! array thanks = thanks|tks|makasih|makasij|makash|makasi|terima kasih|trm ksh|trimakasih|trima kasih|trima ksih|tq|thx|trims|tengs|thank|terimakasih|maaci
+
+! array assalamualaikum = assalamualaikum|asalamualaikum|salamualaikum|samlekum|asalammualaikum
+
+! array salamkenal = slam kenal|slm kenal|lam kenal|salm kenal|salam knal|salam knl|salken|lam nal|sal ken|salam kenal|salamkenal
+
+! array ok = ok|okk|oke|okee|okeee|okay|okayy|oce|sip|sipp|sippp|siip|siiipp|siiippp
+
+! array cari = cari|cariin|cri|criin|lihat|liat|lihatin|liatin|booking|bookingin|boking|bokingin|buking|bukingin|beli|bli|beliin|bliin|tanya|tanyain|tnyain|tnya|nyari|nyariin
+
+! array pesawat = pesawat|psw|pswt|pesawar|psawat|pswat|pesawt
+
+! array tiket = tiket|tket|ticket
+
+! array salah = salah|slah|slh|bukan|bkan|bkn
+
+! array betul = iya|iyaa|iyaaa|iyee|iyeee|iyak|yak|iy|iye|ya|y|ho'oh|ho oh|he em|he'em|hem|hemm|hmm|hm|yoi|yo'i|yoyoi|benar|betul|bener|bner|bnr|bnar|yap|yup|iyup|iyap|sip|sipp|sippp|seepp|sep
+
+! array xtrans = xtrans|xtran|shuttle bus|shutle bus
+
+! array cuisine1 = aceh|american|amerika|amrik|arab|arabian|asia|asian|autralia|australi|ausie|aussie|bakery|roti|bakmi|mi|mie|bakso|baso|balinese|bali|bangka|batak|belanda|betawi|beverages|minuman|british|inggris|bubble tea|bubbletea|burger|cafe|kafe|caribbean|karibia|chinese|cina|china|coffee and tea|teh dan kopi|teh|kopi|continental|kontinental|deli|desserts|dessert|pencuci mulut|dimsum|dim sum|drinks only|european|eropa|finger food|cemilan|camilan|kudapan|snack|snacks|french|prancis|perancis|german|jerman|greek|yunani|grill|panggang|healthy food|makanan sehat|ice cream|es krim|eskrim|indian|india
+
+! array cuisine2 = indonesian|indo|indonesia|irish|irlandia|italian|italia|itali|japanese|japan|jepang|jawa|javanese|java|juices|juice|jus|kalimantan|kebab|korean|korea|lebanese|lebanon|lombok|makassar|malaysian|malaysia|melayu|manado|medan|mediterranean|mediterania|mexican|mexico|middle eastern|timur tengah|mongolian|mongolia|north indian|india utara|padang|padangnese|pakistani|pakistan|palembang|peranakan|pizza|piza|portuguese|portugese|portugis|ramen|satay|sate|seafood|sea food|makanan laut|hidangan laut|singaporean|singapore|singapur|singapura|spore|soto|south indian|india selatan
+
+! array cuisine3 = spanish|spanyol|steakhouse|steak house|steak|steik|street food|jajanan|streetfood|kaki lima|jajan|sulawesi|sumatera|sumatra|sunda|sundanese|sushi|taiwanese|taiwan|tex mex|texmex|mexico|meksiko|thai|thailand|turkish|turki|vietnamese|vietnam|western|barat|yogyakarta|yogya|jogja|jogjakarta
+
+! array location1 = ancol|angke|muara angke|bantar gebang|bantargebang|beji|bekasi barat|bekasi selatan|bekasi timur|bekasi utara|benda|bendungan hilir|benhil|bintaro|blok m|bogor barat|bogor selatan|bogor tengah|bogor timur|bogor utara|bojongsari|bojong sari|cakung|cawang|cempaka putih|cengkareng|cibodas|cibubur|cijantung|cikini|cilandak|ciledug|cililitan|cilincing|cilodong|cimanggis|cinere|cipayung|cipinang|cipondoh|ciputat|ciputat timur|daan mogot|dharmawangsa|darmawangsa|duren sawit|fatmawati|gajah mada|gajahmada|gambir|gandaria|gatot subroto|gatsu|green garden|green ville|greenville|grogol|gunung sahari|hayam wuruk|jagakarsa
+
+! array location2 = jatiasih|jati asih|jatinegara|jatisampurna|jelambar|kalibata|xbata|kalideres|xderes|kalimalang|xmalang|kampung melayu|karang tengah|karawaci|karet|kebayoran lama|kebon jeruk|kecamatan tangerang|tangerang|tanggerang|kedoya|kelapa gading|gading|kemang|kemanggisan|kemayoran|kembangan|klender|koja|kota|kramat jati|kuningan|larangan|lebak bulus|limo|makasar|mampang prapatan|mampang|mangga besar|mangga dua|manggarai|matraman|medan satria|melawai|menteng|meruya|muara karang|mustikajaya|mustika jaya|neglasari|pademangan|palmerah|pamulang|pancoran|pancoran mas|pantai indah kapuk|pik|pasar baru|pasar minggu|pecenongan
+
+! array location3 = penjaringan|periuk|priuk|pesanggrahan|pesanggerahan|pinang|pinang ranti|pinangranti|pluit|pondok aren|pondok bambu|pondok gede|pondok indah|pondok melati|pulo gadung|pulogadung|puri indah|puri|rawalumbu|rawa lumbu|rawamangun|roxy|scbd|sawah besar|sawangan|senayan|senen|senopati|serpong|serpong utara|setiabudi|stiabudi|setu|slipi|sudirman|sukmajaya|sunter|taman mini|taman sari|tamansari|tambora|tanah abang|tana abang|tenabang|tanah sareal|tanjung duren|tanjung priok|priok|tapos|tebet|thamrin|tomang
+
+! array toljasamarga1 = cililitan|taman mini|dukuh|pasar rebo|cibubur|cibubur utama|cisalak|cimanggis utama|cimanggis|gunung putri|jagorawi|cawang|tebet|kuningan|semanggi|senayan|pejompongan|slipi|tanjung duren|tomangjelambar|angke|dalam kota|dalkot|halim|pondok gede barat|pondok gede timur|cikunir|bekasi barat|bekasi timur|tambun|cibitung|cikarang utama|cikarang barat|cibatu|cikarang timur|karawang barat|karawang timur|dawuan|kalihurip|cikampek|cikopo|kebon jeruk|meruya|meruya utara|kembangan selatan|karang tengah|karang tengah barat
+
+! array toljasamarga2 = kunciran|tangerang|karawaci|bitung|joglo|cileduk|dawuan|sadang|jatiluhur|cikamuning|padalarang barat|padalarang|pasteur|pasir koja|kopo|mohammad toha|buah batu|gedebage|cileunyi|baros|purbaleunyi|purbalenyi|cipularang|bandung|veteran|ciputat|pondok pinang|fatmawati|ampera|lenteng agung|gedong|kampung rambutan|bambu apus|setu|jatiwarna|jatiasih|kalimalang|bintara|cakung barat|cakung timur|rorotan|cilincing|jorr|lingkar luar|palimanan|plumbon|ciperna|kanci|cipali|cikapali|serpong|bsd|bintaro|ulujami
+
+! array bosen = bosen|bosan|bt|bete
+
+! array nggak = nggak|gak|enggak|engga|gk|tidak|tdk|ngga|gamau|nggamau|gausah|kepo|mau tau|mw tau|mo tau|motau|mo taw|nggak mau|gak mau|ga mau|gk mau|gamao|rahasia|ada deh|ad deh|adadeh|adade|ada de
+
+! array jangan = jangan|jgn|jngan
+
+! array hurufb = huruf b|huruf bnya|huruf b-nya|b|b-nya|bnya|b
+
+! array gaujan = nggak ujan|nggak hujan|ngga ujan|ngga hujan|enggak ujan|enggak hujan|engga ujan|engga hujan|gak ujan|gak hujan|ga ujan|ga hujan|gaujan
+
+! array nyerah = nyerah|nggak tau|gatau|enggak tau|gak tau|engga tau|ngga tau
+
+! array roda = roda|rodanya|ban|bannya|banya|rodany|banny|bany
+
+! array begadang = begadang|bergadang|bgadang|brgadang
+
+! array ujan = ujan|hujan
+
+! array wk = wk|wkwk|wkwkwk|wkwkwkwk|wkwkwkwkwk
+
+! array hahaha = haha|hahaa|hahaha|hahahaa|hahahaha|hahahahaa|hha
+
+! array lagi = lagi|lgi|lg
+
+! array namaku = namaku|namaqu|nama aku|nama aqu|nama gue|nama gua|nama gw|nama w|namaq|nama q|nmaku|nmaqu|nma aku|nma aqu|nma gue|nma gua|nma gw|nma w|nmaq|nma q|nama gwe|nma gwe|nama saya|nama sya|nama sy|nma saya|nma sya|nma sy|nm saya|nm sya|nm sy|aku|ak|aq|aqu|saya|sy|sya|gue|gua|gw|w|gwe
+
+! array buatapa = buat apa|ngapain|wat apa|buat ap|apa|ngpain|buat apaan|emang kenapa|emg knp|mang ngapa|mang napa|mang np|mang npa|emg kenapa|emg knpa|emng kenapa|emng knp|emng knpa|mang knp
+
+! array date = 1|01|2|02|3|03|4|04|5|05|6|06|7|07|8|08|9|09|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31
+
+! array months = 01|1|02|2|03|3|04|4|05|5|06|6|07|7|08|8|09|9|10|11|12|jan|feb|mar|apr|mei|jun|jul|aug|sept|okt|nov|des|januari|februari|maret|april|mei|juni|juli|agustus|september|oktober|november|desember|january|february|pebruari|march|april|may|june|july|august|aug|october|oct|nopember|december|dec
+
+! array years = 1950|50|1951|51|1952|52|1953|53|1954|54|1955|55|1956|56|1957|57|1958|58|1959|59|1960|60|1961|61|1962|62|1963|63|1964|64|1965|65|1967|67|1968|68|1969|69|1970|70|1971|71|1972|72|1973|73|1974|74|1975|75|1976|76|1977|77|1978|78|1979|79|1980|80|1981|81|1982|82|1983|83|1984|84|1985|85|1986|86|1987|87|1988|88|1989|89|1990|90|1991|91|1992|92|1993|93|1994|94|1995|95|1996|96|1997|97|1998|98|1999|99|2000|00|2001|01|2002|02|2003|03|2004|04|2005|05|2006|06|2007|07|2008|08|2009|09|2010|10|2011|11|2012|12|2013|13|2014|14|2015|15|2016|16|2017|17|2018|18
+
+! array uber = uber|jemput|jmput|jmpt
+
+! array token = token|pln|tken|listrik|pulsa listrik|pulsa pln
+
+! array zomato = zomato|resto|restoran|laper|lapar
+
+! array cuaca = cuaca|cuacanya|cuacany
+
+! array jalantol = jalan tol|jalantol|jln tol|info tol|infotol
+
+! array ingetin = ingetin|ingatin|reminder
+
+! array terjemahin = terjemahin|artiin|terjemahkan|translator
+
+! array cowok = cowok|cowo|cwo|cwok|co|laki|lakik|lakilaki|pria|men|man
+
+! array cewek = cewek|cewe|cwe|cwek|ce|cw|perempuan|prempuan|wanita|ladies|lady|women|woman
+
+! array emailku = emailku|emailqu|email aku|email aqu|email gue|email gua|email gw|email w|emailq|email q
+
+! array suka = suka|ska|iya|iy|iye|ya|y|ho'oh|ho oh|he em|he'em|hem|hemm|hmm|hm|yoi|yo'i|yoyoi|benar|betul|bener|bner|bnr|bnar|yap|yup|iyup|iyap
+
+! array mail = gmail|com|id|co|ymail|yahoo|rocketmail|hotmail|mail
+
+! array panggil = dipanggil|panggil|panggilnya|manggilnya|panggilny|manggilny|manggil|dipanggilnya
+
+! array panggilan = panggilan|panggiln|pnggiln|pnggilan|panggilanku|panggilnku|pnggilnku|pnggilanku|panggilanqu|panggilnqu|pnggilanqu|pnggilnqu|panggilan aku|panggiln aku|pnggilan aku|pnggiln aku|panggilan aqu|panggiln aqu|pnggilan aqu|pnggiln aqu|panggilan gue|panggiln gue|pnggilan gue|pnggiln gue|panggilan gua|panggiln gua|pnggilan gua|pnggiln gua|panggilan gw|panggiln gw|pnggilan gw|pnggiln gw|panggilan w|panggiln w|pnggilan w|pnggiln w|panggilanq|panggilnq|pnggilanq|pnggilnq|panggilan q|panggiln q|pnggilan q|pnggiln q|panggil|panggilnya|manggilnya|panggilny|manggilny
+
+! array bencong = bencong|banci|cong|ncong|bncong
+
+! array boleh = boleh|bole|bolee|bolehh|leh|lehh|bleh|blh
+
+! array bener = bener|beneran|betul|betulan|bneran|bnran|btulan|btul
+
+! array ujan = ujan|hujan|ujn|hjan|hjn
+
+! array males = males|mles|malas|mlas|mls|malez|mlez|mlz|mlas|selam|mger|mager|magr
+
+! array punya = punya|pnya|pny
+
+! array boleh = boleh|bole|bolee|bolehh|leh|lehh|bleh|blh
+
+! array bener = bener|beneran|betul|betulan|bneran|bnran|btulan|btul
+
+! array ujan = ujan|hujan|ujn|hjan|hjn
+
+! array males = males|mles|malas|mlas|mls|malez|mlez|mlz|mlas|selam|mger|mager|magr
+
+! array punya = punya|pnya|pny
+
+! array kamu = kamu|km|kmu|lo|lu|lw|u|loe|elo|elu|bang joni|bang|bangjoni|bangjon|bang jon|joni
+
+! array siapa = siapa|syp|sapa|spa
+
+! array apa = apa|apaan|ap
+
+! array jorok = jorok|jrok|jrk|jork|jorse
+
+! array idih = idih|dih|idiiihh|ih|idihh|idiihhh|dihhh|diihhh
+
+! array pacar = pacar|pcr|pcar|pacr|bokin
+
+! array musik = musik|music
+
+! array makanan = makanan|mkanan|mknan|makan|mangan|nedo
+
+! array film = film|filem|pilem|pelem
+
+! array bokek = bokek
+
+! array duit = duit|uang|money|hepeng
+
+! array jomblo = jomblo|jmblo|jomblok
+
+! array namaikan = lele|gurame|tongkol|peda|jambal|mujaer|mujair|asin|kue|kuwe|baronang|sapu|sapu-sapu|sapu2|paus|hiu|kembung|arwana|lohan|lo han|louhan|lou han|cupang|piranha|mas|maskoki|tenggiri|bandeng|cakalang|buntal|buntel|kakap|koi|kod|makarel|makerel|sarden|sardencis|pari|salmon|belida|gabus|patin|sepat|teri
+
+! array duit = duit|uang
+
+! array minta = minta|bagi|mnta|bgi
+
+! array registrasi = regis|register|registrasi|rgstr|buka akun

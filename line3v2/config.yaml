@@ -1,0 +1,8 @@
+client_id: EZx9ssXyrJFuWTqI_Unh_5guHIvAJyV9
+client_secret: KZRRW1yVSJJVNrKLRVsS9AT89VvuLoUDHYhHKFtI
+redirect_url: https://www.bangjoni.com/uber_token
+scopes:
+    - profile
+    - request
+    - places
+    - history

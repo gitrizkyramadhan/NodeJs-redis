@@ -1,0 +1,16 @@
+TOKEN_TELEGRAM=/128131366:AAHlMGVGBLdfRv7hT68r86bv8GXsSuHzjLw
+KEYFILE=/home/ssl/bangjoni.com.key
+CERTFILE=/home/ssl/from_GlobalSign/cachain.pem
+URL_TELEGRAM=https://telegram.me/bangjonibot
+MYSQL_HOST=139.59.244.156
+MYSQL_USER=root
+MYSQL_PWD=bangjoni2016!
+MYSQL_DB=bangjoni
+WEB_HOOK=https://www.bangjoni.com:4000
+EMAIL_NOTIF=e6ef27452cb778eb8351@cloudmailin.net
+COMMERCE_BASE_URL=http://localhost/merchantcommerce/
+TOKEN_LINE=pi0Ji3uOX6bnpHfVw9vUkvcY3vWIm/3+cxqnf9DCwKY5Rp5og9Kj8vpZdGjJrXwdcfwzA163oT9a4HkcmkomJwCI6Xn0Rlv/2bmd3numlH10yYIrpEi17cyzqI4NJMSK6Bov9g4AE3T3/CRN6EU6036Nfd2Y6SKCxBWg7Cr7O3c=
+BJP_MYSQL_HOST=139.59.244.156
+BJP_MYSQL_USER=root
+BJP_MYSQL_PWD=bangjoni2016!
+BJP_MYSQL_DB=bangjoni

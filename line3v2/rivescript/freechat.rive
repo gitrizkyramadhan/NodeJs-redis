@@ -1,0 +1,383 @@
++ [*] muhammad [*]
+- seorang nabi dan rasul terakhir bagi umat Muslim
+
+
++ [*] (@love|@sayang) [*] {weight=10}
+- I love you too.. :3
+
++ [*] (@hahaha) [*]
+- Hahaha :D
+
++ [*] (@wk) [*]
+- Wkwkwk :D
+
++ [*] (@minta|@nggak) [*] (@duit) [*]
+- co00 :( <br>
+^ Sama nih, gue juga nggak punya uang. <br>
+^ Tapi kalo tebak-tebakan gue punya, mau nggak? :D {topic=tebak_tebakan}
+
++ [*] (@nggak|@cari) [*] (@cowok|@cewek|@pacar) [*]
+- co00 Loh, nggak punya pacar toh? Kalo gitu mending travelling aja! <br>
+^ Siapa tau berangkatnya sendiri, pulang udah ada gandengan :D <br>
+^ Urusan tiket pesawatnya, biar gue yang cariin deh, mau nggak? {topic=jomblotravelling}
+
++ [*] (@namaku) [*] (@jomblo) [*]
+- co00 Loh, nggak punya pacar toh? Kalo gitu mending travelling aja! <br>
+^ Siapa tau berangkatnya sendiri, pulang udah ada gandengan :D <br>
+^ Urusan tiket pesawatnya, biar gue yang cariin deh, mau nggak? {topic=jomblotravelling}
+
++ [*] (@lagiapa) [*] {weight=10}
+- Lagi ngupil, sini bantuin :D {topic=ngupil}
+- gr01 Ya lagi nungguin chat dari lo lah :p <br>
+^ Apa yang bisa gue bantu nih?
+- co00 Lagi abis ada yang beli pulsa nih barusan, hehehe.. <br>
+^ Lo mau beli pulsa juga nggak? {topic=lagiapabelipulsa}
+- co00 Lagi abis nyariin tempat makan yang enak buat temen gue nih. <br>
+^ Eh lo juga bisa loh tanya tempat makan yang enak sama gue. <br>
+^ nanti gue kasih tau tempat makan yang enak di sekitar lo, mau nggak? {topic=lagiapazomato}
+- co00 Lagi abis mesenin tiket pesawat nih buat temen gue, hehehe.. <br>
+^ Eh iya, lo juga kalo mau cari tiket pesawat bisa sama gue loh! Mau coba nggak? :) {topic=lagiapaflight}
+- co00 Lagi abis mesenin tiket shuttle bus Xtrans nih buat temen gue, hehehe.. <br>
+^ Oh iya, lo juga kalo mau booking tiket shuttle bus Xtrans bisa sama gue loh, mau coba? :) {topic=lagiapaxtrans}
+
++ [*] (@beli) [*] (@bangjoni) [*] {weight=11}
+- gr01 Hmm.. Nggak cuma beli-beli aja sih sebenernya. Gue juga bisa kasih lo info-info lain juga. <br>
+^ Tuh coba cek deh.
+
++ *
+* <get mycontext> != random => ee01 {topic=<get mycontext>}
+
+//+ *
+//* <get mycontext> != random => ee01 Duh.. Maaf ya, gue masih belajar bahasa manusia nih.. Belom ngerti sama yang lo tanyain itu :( <br>
+//^ Coba cek deh.. Apa yang bisa gue bantu kira-kira? :) {topic=<get mycontext>}
+//- gr01 Duh.. Maaf ya, gue masih belajar bahasa manusia nih.. Belom ngerti sama yang lo tanyain itu :( <br>
+//^ Coba cek deh.. Apa yang bisa gue bantu kira-kira? :) {topic=random}
+//- gr01 Hmm.. Sorry ya, kayaknya di program gue belom diajarin bahasa itu deh. Gue nggak ngerti sama yang lo bilang itu :( <br>
+//^ Coba cek deh.. Apa yang bisa gue bantu kira-kira? :) {topic=random}
+
++ [*] iseng [*] {weight=10}
+- Hmm.. Daripada iseng gak ada kerjaan, mending kita main tebak-tebakan aja mau nggak? {topic=tebak_tebakan}
+
++ [*] (@bosen) [*] {weight=10}
+- Hmm.. Daripada bosen gak ada kerjaan, mending kita main tebak-tebakan aja mau nggak? {topic=tebak_tebakan}
+- fl00 Bosen? Lo butuh liburan tuh berarti! Coba cek-cek harga tiket pesawatnya nih. {topic=random}
+
++ [*] (@makian) [*] {weight=10}
+- Ish jangan gitu ah ngomongnya.. :/
+- Busyettt.. Jangan ngomong kasar ah, gak keren :/
+
++ [*] (@maaf) [*]
+- Okee..
+- Iyaa..
+- Sip :)
+
++ [*] (@jemput) [*] {weight=10}
+- ub01 {topic=uber}  <set mycontext=uber>
+
++ [*] (bantuin ngerjain pr|bantuin ngerjain peer|bantuin kerjain pr|kerjain pr) [*] {weight=10}
+- Loh? Kerjain sendiri dong, masa gue yang kerjain? Ntar jawabannya bisa salah semua :p
+
+> topic lagiapaxtrans inherits random
+
+  + [*] (@mau) [*]
+  - xt01 Oke! Itu daftar pool keberangkatan Xtrans. <br>
+  ^ Lo mau berangkat dari mana, <first_name>?\n
+  ^ Ketik aja nama poolnya (Contoh: Bale Xtrans) {topic=xtrans} <set mycontext=xtrans>
+
++ [*] (@nggak) [*]
+  - gr01 Oke deh, apa yang bisa gue bantu nih? {topic=random}
+
+< topic
+
+> topic lagiapaflight inherits random
+ 
+  + [*] (@mau) [*]
+  - fl00 Oke, ini dia nih destinasi yang paling sering dicari. <br>
+  ^ Coba cek aja :)
+
+  + [*] (@nggak) [*]
+  - gr01 Oke deh, apa yang bisa gue bantu nih? {topic=random}
+
+< topic
+
+> topic lagiapazomato inherits random
+
+  + [*] (@mau) [*]
+  - zo00 Oke! Pake fitur share location lo ya untuk menentukan lokasi pencarian restoran (tombol + samping tombol emoticon)<br>
+  ^ Lo bisa share lokasi lo sekarang ini atau bisa juga share lokasi lain.<br>
+  ^ Nanti gue kasih info restoran dengan review terbaik di Zomato berdasarkan lokasi yang lo pilih :9 {topic=zomato} <set mycontext=zomato>
+
+  + [*] (@nggak) [*]
+  - gr01 Oke deh, apa yang bisa gue bantu nih? {topic=random}
+
+< topic
+
+> topic lagiapabelipulsa inherits random
+
+  + [*] (@mau) [*]
+  - Oke deh, nomor HP-nya berapa? {topic=pulsa} <set mycontext=pulsa> <set pulsa_data=0>
+
+  + [*] (@nggak) [*]
+  - gr01 Oke deh, apa yang bisa gue bantu nih? {topic=random}
+
+< topic
+
+> topic ngupil inherits random
+
+  + [*] (@jorok) [*]
+  - gr01 Hahaha <br>
+  ^ Kalo jorok tuh upilnya gue peperin ke lo :D <br>
+  ^ Btw, apa yang bisa gue bantu nih? {topic=random}
+
+  + *
+  - gr01 Hahaha, nggak lah bercanda <br>
+  ^ Btw, apa yang bisa gue bantu nih? {topic=random}
+
+< topic
+
+> topic jomblotravelling inherits random
+
+  + [*] (@mau) [*]
+  - fl00 Gitu dong move on! :D <br>
+  ^ Nih coba lo cari-cari dulu deh destinasinya. 
+
+  + [*] (@nggak) [*]
+  - Hoo.. Lo nggak suka travelling ya? Terus sukanya apa dong? <br>
+  ^ Coba pilih deh topik apa yang lo suka, gue punya banyak tips-tips seru buat lo :) \n\n
+  ^ Musik\n\n
+  ^ Film \n\n
+  ^ Makanan\n\n {topic=jomblonggakmau}
+
+  + [*] (@bokek) [*]
+  - Ya ampun.. Sedih banget, udah jomblo nggak punya duit lagi :'( <br>
+  ^ Makanya nabung dong! Nih coba lo cek deh tips nabung ini >> http://www.hipwee.com/daripembaca/10-cara-supaya-kamu-selalu-punya-uang-untuk-disisihkan-jadi-tabungan-masa-depan/
+
+  + [*] (@nggak) [*] (@duit) [*] {weight=5}
+  - Ya ampun.. Sedih banget, udah jomblo nggak punya duit lagi :'( <br>
+  ^ Makanya nabung dong! Nih coba lo cek deh tips nabung ini >> http://www.hipwee.com/daripembaca/10-cara-supaya-kamu-selalu-punya-uang-untuk-disisihkan-jadi-tabungan-masa-depan/ 
+
+< topic
+
+> topic jomblonggakmau inherits random
+
+  + [*] (@musik) [*]
+  - Wih suka musik? Sama dong, gue juga! <br>
+  ^ Mending dengerin lagu-lagu yang lagi hits di sini aja >> http://www.radioonline.co.id/ <br>
+  ^ Mau radio apa aja ada loh! {topic=random}
+
+  + [*] (@makanan) [*]
+  - zo00 Seneng kulineran ya? Gue bisa kasih rekomendasi tempat-tempat makan yang enak loh! <br>
+  ^ Coba share location lo dulu deh (tombol + sebelah tombol emoticon) nanti gue kasih tau tempat makan yang enak di sekitar lo :9 {topic=zomato} <set mycontext=zomato>
+
+  + [*] (@film) [*]
+  - Kalo nonton film sih gue juga suka, apa lagi kalo dibayarin :p <br>
+  ^ Btw, lo udah cek film-film terbaru belom? Coba cek di sini deh >> http://www.21cineplex.com/nowplaying {topic=random}
+  - Kalo nonton film sih gue juga suka, apa lagi kalo dibayarin :p <br>
+  ^ Btw, lo udah cek film-film terbaru belom? Coba cek di sini deh >> https://www.cgv.id/en/movies/now_playing {topic=random}
+  - Kalo nonton film sih gue juga suka, apa lagi kalo dibayarin :p <br>
+  ^ Btw, lo udah cek film-film terbaru belom? Coba cek di sini deh >> http://www.cinemaxxtheater.com/Movies.aspx {topic=random}
+
+< topic
+
+> topic service inherits random
+  
+  + pulsa
+  - Mau isi pulsa? Mana sini nomernya  {topic=pulsa} <set mycontext=pulsa> <set pulsa_data=0>
+
+  + pesawat
+  - fl00 Nyari tiket pesawat murah? Emang paling bener deh nanya sama gue :D <br>
+  ^ Nah ini nih destinasi yang paling banyak dicari sama orang-orang
+
+< topic
+
+> topic bioskop inherits random
+    
+    + [*] (@males) [*] {weight=5}
+    - zo00 Hmm.. Yaudah kalo gitu jangan nonton deh.. Jajan-jajan aja gimana? <br>
+    ^ Gue punya info soal restoran atau cafe-cafe yang enak loh.. <br>
+    ^ Lo tentuin dulu lokasinya mau di mana, pake fitur share location (tombol + samping tombol emoticon). <br>
+    ^ Nanti gue kasih tau deh tempat-tempat yang bisa jajan-jajan enak :9 {topic=zomato} <set mycontext=zomato>
+    - Yaudah kalo gitu tidur aja deh dari pada bingung mau ngapain :D {topic=random}
+
+    + [*] (@nggak) [*]
+    - Oke deh kalo gitu ;) {topic=random}
+    - Sip lah :D {topic=random}
+    
+    + [*] (@beli|@cari) [*] (@tiket) [*]
+    - Yahh.. Kalo sementara ini gue belom bisa beliin tiket bioskop buat lo nih. <br>
+    ^ Tapi kalo lo mau beli tiket bioskop, coba cek di sini deh >> https://id.bookmyshow.com/film/ <br>
+    ^ Semoga membantu yaa.. ;) {topic=random}
+
+    + *
+    * <get mycontext> != random => gr01 Duh.. Maaf ya, gue belom bisa jawab pertanyaan lo nih, masih belajar soalnya :) <br>
+    ^ Coba cek di atas deh.. Apa yang bisa gue bantu kira-kira? {topic=<get mycontext>}
+    - gr01 Duh.. Maaf ya, gue masih belajar bahasa manusia nih.. Belom ngerti sama yang lo tanyain itu :( <br>
+    ^ Coba cek deh.. Apa yang bisa gue bantu kira-kira? :) {topic=random}
+    - gr01 Hmm.. Sorry ya, kayaknya di program gue belom diajarin bahasa itu deh. Gue nggak ngerti sama yang lo bilang itu :( <br>
+    ^ Coba cek deh.. Apa yang bisa gue bantu kira-kira? :) {topic=random}
+
+< topic
+
+> topic freechatservice inherits random
+
+    + [*] (@beli) [di] (@bangjoni) [*]
+    - co00 Kamu mau beli apa di Bang Joni? <set res_topic=general> {topic=askservice}
+
+    + [*] (@beli) (@pulsa) [*]
+    - co00 Kamu mau beli pulsa di Bang Joni? <set res_topic=pulsa> {topic=askservice}
+
+    + [*] (@beli) (@pesawat) [*]
+    - co00 Kamu mau beli tiket pesawat di Bang Joni? <set res_topic=pesawat> {topic=askservice}
+
+    + (*)
+    - {topic=random}{@ <star>}
+
+< topic
+
+> topic askservice inherits service
+
+    + [*] (@halo) [*]
+    - gr01 Halo, <first_name>! <br>
+    ^ Apa yang bisa gue bantu nih? :)
+    - gr01 Ya? Mau gue bantu apa nih, <first_name>?
+    - gr01 Halo juga! <br>
+    ^ Ada yang bisa gue bantu, <first_name>?
+
+    + [*] (@mau) [*]
+    * <get res_topic> == general => {@ halo} {topic=service}
+    * <get res_topic> == pulsa => {@ pulsa} {topic=pulsa}
+    * <get res_topic> == pesawat =>{topic=service} {@ pesawat}
+    - gr01 Halo, <first_name>! <br>
+    ^ Apa yang bisa gue bantu nih? :)
+    - gr01 Ya? Mau gue bantu apa nih, <first_name>?
+    - gr01 Halo juga! <br>
+    ^ Ada yang bisa gue bantu, <first_name>?
+
+    + [*] (@nggak) [*]
+    - Okee, kita ngobrol lagi yuk {topic=random}
+    - Yaah, padahal gue udah ngarep banget :( <br>
+    ^ Yaudah yuk kita ngobrol lagi {topic=random}
+    - Ah PHP luu, ngobrol aja yuk ama gue {topic=random}
+
+< topic
+
+> topic ngupil inherits random
+
+    + [*] (@jorok) [*]
+    - gr01 Hahaha <br>
+    ^ Kalo jorok tuh upilnya gue peperin ke lo :D <br>
+    ^ Btw, apa yang bisa gue bantu nih? {topic=random}
+
+    + *
+    - gr01 Hahaha, nggak lah bercanda <br>
+    ^ Btw, apa yang bisa gue bantu nih? {topic=random}
+
+< topic
+
+> topic tebak_tebakan inherits random
+
+    + [*] (@nggak) [*] {weight=5}
+    - Ih yakin nih nggak mau? Coba dulu dong.
+    - Masa sih nggak mau? Tebak-tebakannya seru loh!
+
+    + [*] (@mau) [*]
+    - Nih coba jawab ya! Kenapa bebek goreng rasanya enak? {topic=tebak_bebek_goreng}
+    - Coba jawab nih! Ada satu payung kecil dipake sama 5 orang, tapi nggak ada satu pun yang keujanan, kok bisa? {topic=tebak_payung5orang}
+    - Nih coba sebutin 3 nama-nama ikan! Sebutin satu-satu coba, yang pertama ikan apa? :D {topic=tebak_nama_ikan1}
+
+    + *
+    - Kenapa gitu? <br>
+    ^ jadi gak mau main nih?
+
+< topic
+
+> topic tebak_nama_ikan1 inherits random
+
+    + [*] (@namaikan) [*]
+    - Iya betul ikan <star>, terus yang kedua ikan apa lagi coba? {topic=tebak_nama_ikan2}
+
+    + *
+    - Ikan apa tuh? Ngarang ya? :D
+    - Ah, perasaan nggak ada nama ikan kayak gitu deh, ikan yang lain apa lagi coba?
+
+    + [*] (@hahaha) [*]
+    - Hahaha :D
+
+    + [*] (@wk) [*]
+    - Wkwkwk :D
+
+< topic
+
+> topic tebak_nama_ikan2 inherits random
+
+    + [*] (@namaikan) [*]
+    - Iya ikan <star>, betul. Yang terakhir nih ikan apa lagi? {topic=tebak_nama_ikan3}
+
+    + *
+    - Ikan apa tuh? Ngarang ya? :D
+    - Ah, perasaan nggak ada nama ikan kayak gitu deh, ikan yang lain apa lagi coba?    
+
+    + [*] (@hahaha) [*]
+    - Hahaha :D
+
+    + [*] (@wk) [*]
+    - Wkwkwk :D
+
+< topic
+
+> topic tebak_nama_ikan3 inherits random
+
+    + [*] (@namaikan) [*]
+    - gr01 Pinteerr.. Dah tuh ambil sepedanya sana sama Pak Jokowi.. <br>
+    ^ Hahaha.. Nggak deng bercanda :D <br>
+    ^ Btw, apa yang bisa gue bantu nih <first_name>? {topic=random}
+
+    + *
+    - Ikan apa tuh? Ngarang ya? :D
+    - Ah, perasaan nggak ada nama ikan kayak gitu deh, ikan yang lain apa lagi coba?
+
+    + [*] (@hahaha) [*]
+    - Hahaha :D
+
+    + [*] (@wk) [*]
+    - Wkwkwk :D
+
+< topic
+
+> topic tebak_bebek_goreng
+
+    + [*] (@hurufb) [*]
+    - Hahaha iya bener! Coba kalo nggak ada huruf B-nya. Ogah banget deh makannya. {topic=random}
+
+    + (*)
+    - Salah! coba lagi ayok.
+    - Bukan itu. Masa nggak tau sih?
+
+    + [*] (@nyerah) [*]
+    - Yah payah deh nyerah. <br>
+    ^ Jawabannya, karena Bebek Goreng ada huruf B-nya. Coba kalo nggak ada, nggak bakal ada yang mau makan! Hahaha :D {topic=random}
+
+    + (@nggak) {weight=10}
+    - Nggak tau? Payah ah.. <br>
+    ^ Jawabannya, karena emang nggak ujan, jadi nggak ada yang basah! Hahaha :D {topic=random}
+
+< topic
+
+> topic tebak_payung5orang
+   
+    + [*] (@gaujan) [*]
+    - Hahaha betul! Orang gak ujan, ya nggak ada yang basah lah! {topic=random}
+
+    + (*)
+    - Salah! coba lagi ayok.
+    - Bukan itu. Masa nggak tau sih?
+
+    + (@nggak) {weight=10}
+    - Nggak tau? Payah ah.. <br>
+    ^ Jawabannya, karena emang nggak ujan, jadi nggak ada yang basah! Hahaha :D {topic=random}
+
+    + [*] (@nyerah) [*]
+    - Yah payah deh nyerah. <br>
+    ^ Jawabannya, karena emang nggak ujan, jadi nggak ada yang basah! Hahaha :D {topic=random}
+
+< topic
